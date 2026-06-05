@@ -301,6 +301,85 @@
     margin-top: 6px; letter-spacing: -0.005em;
   }
 
+  /* Mülk Üzerindeki Değerler kutusu */
+  .asset-block {
+    margin-bottom: 44px;
+    padding: 28px 32px;
+    background: var(--bg-soft);
+    border-radius: 12px;
+    border-left: 3px solid var(--red);
+    max-width: 760px;
+  }
+  .asset-block .at-title {
+    font-family: 'Poppins', sans-serif;
+    font-size: 10.5px; letter-spacing: 0.18em; text-transform: uppercase;
+    color: var(--red); font-weight: 600; margin-bottom: 14px;
+  }
+  .asset-block .at-h {
+    font-family: 'Poppins', sans-serif;
+    font-size: 17px; font-weight: 600;
+    color: var(--ink); margin-bottom: 8px; letter-spacing: -0.015em;
+    line-height: 1.35;
+  }
+  .asset-block .at-sub {
+    font-size: 13.5px; color: var(--ink-soft);
+    margin-bottom: 4px; line-height: 1.65;
+  }
+  .asset-block .at-breakdown {
+    margin: 18px 0 4px;
+  }
+  .asset-block .ab-row {
+    display: grid;
+    grid-template-columns: 1fr 1.3fr 110px;
+    gap: 14px;
+    padding: 12px 0;
+    border-bottom: 1px solid var(--line);
+    align-items: baseline;
+  }
+  .asset-block .ab-row:last-child { border-bottom: none; }
+  .asset-block .ab-lbl {
+    font-family: 'Poppins', sans-serif;
+    font-size: 13px; font-weight: 500;
+    color: var(--ink); letter-spacing: -0.005em;
+  }
+  .asset-block .ab-desc {
+    font-size: 11.5px;
+    color: var(--ink-soft);
+    line-height: 1.4;
+  }
+  .asset-block .ab-amt {
+    font-family: 'Poppins', sans-serif;
+    font-size: 13.5px; font-weight: 600;
+    color: var(--ink); text-align: right;
+    letter-spacing: -0.005em;
+  }
+  .asset-block .at-value {
+    display: flex; align-items: baseline; justify-content: space-between;
+    gap: 14px; flex-wrap: wrap;
+    padding-top: 16px; margin-top: 8px;
+    border-top: 1.5px solid var(--ink);
+  }
+  .asset-block .at-value .v-lbl {
+    font-family: 'Poppins', sans-serif;
+    font-size: 14px; font-weight: 600;
+    color: var(--ink); letter-spacing: -0.01em;
+  }
+  .asset-block .at-value .v {
+    font-family: 'Poppins', sans-serif;
+    font-size: 26px; font-weight: 600;
+    color: var(--red); letter-spacing: -0.02em;
+  }
+  .asset-block .at-note {
+    font-size: 11.5px; color: var(--ink-soft);
+    margin-top: 14px; font-style: italic; line-height: 1.55;
+  }
+
+  .sc-breakdown {
+    font-family: 'Poppins', sans-serif;
+    font-size: 11.5px; color: var(--ink-faint);
+    margin: -4px 0 8px; letter-spacing: -0.005em; font-weight: 500;
+  }
+
   .price-grid {
     display: grid; grid-template-columns: 1fr 1fr; gap: 40px;
   }
@@ -541,6 +620,11 @@
     .tax-row .tx-amt { grid-column: 2; grid-row: 1 / span 2; align-self: start; }
     .tax-total { grid-template-columns: 1fr 110px; }
 
+    .asset-block { padding: 24px 22px; }
+    .asset-block .ab-row { grid-template-columns: 1fr 100px; gap: 6px 10px; }
+    .asset-block .ab-desc { grid-column: 1; }
+    .asset-block .ab-amt { grid-column: 2; grid-row: 1 / span 2; align-self: start; }
+
     .embed-wrap iframe { height: 500px; }
     .timeline li { grid-template-columns: 44px 1fr; gap: 14px; }
   }
@@ -650,8 +734,9 @@
     </div>
 
     <div class="topo-note">
-      <div class="ct">Topografik Karakter</div>
+      <div class="ct">Topografik Karakter ve Mevcut Yapı</div>
       <p>Parsel, çevredeki ova dokusundan farklı olarak <strong>ova–yamaç geçiş bandında</strong> yer alır. İki uç arasında yaklaşık <strong>20 m kot farkı</strong> vardır. Teraslı bağ düzeni ve manzara cephesi imkânı sunar.</p>
+      <p>Arazi üzerinde <strong>240 adet 3-4 yaşında Gemlik (Trilye) yağlık zeytin fidanı</strong> bulunmaktadır. Fidanların değer hesabı 03. bölümde detaylı işlenir.</p>
     </div>
   </div>
 </section>
@@ -919,6 +1004,42 @@
       <h2>Değer Analizi ve Fiyat Aralığı</h2>
     </div>
 
+    <div class="asset-block">
+      <div class="at-title">Mülk Üzerindeki Değerler — Hazır Bahçe Dökümü</div>
+      <div class="at-h">240 adet 3-4 yaşında Gemlik (Trilye) yağlık zeytin fidanı</div>
+      <div class="at-sub">Toprağa entegre, sulama ve bakım almış, hayatta kalmış. İlk meyvelerine 2-3 yıl içinde, tam verime ~7 yıl sonunda kavuşacaktır. Aşağıdaki tablo, bir alıcının aynı bahçeyi <strong>bugün sıfırdan kuracak olsa</strong> harcayacağı maliyetlerin toplamıdır.</div>
+
+      <div class="at-breakdown">
+        <div class="ab-row">
+          <div class="ab-lbl">Fidan bedeli</div>
+          <div class="ab-desc">240 × 750 TL ortalama · 3-4 yaş, dikilmiş ve bakımlı</div>
+          <div class="ab-amt">180.000 TL</div>
+        </div>
+        <div class="ab-row">
+          <div class="ab-lbl">Çukur açma + dikim işçiliği</div>
+          <div class="ab-desc">240 adet × ~100 TL · 80×80 cm çukur</div>
+          <div class="ab-amt">24.000 TL</div>
+        </div>
+        <div class="ab-row">
+          <div class="ab-lbl">Damla sulama altyapısı</div>
+          <div class="ab-desc">5,85 dönüm × ~4.500 TL/dönüm kurulum</div>
+          <div class="ab-amt">26.000 TL</div>
+        </div>
+        <div class="ab-row">
+          <div class="ab-lbl">Arazi hazırlığı</div>
+          <div class="ab-desc">Sürüm, taş toplama, sınırlama · 5,85 dönüm</div>
+          <div class="ab-amt">12.000 TL</div>
+        </div>
+      </div>
+
+      <div class="at-value">
+        <span class="v-lbl">Hazır Bahçe Değeri</span>
+        <span class="v">~242.000 TL</span>
+      </div>
+
+      <div class="at-note">3-4 yıllık bakım emeği (sulama, gübre, ilaç) ayrıca değerlendirilmemiştir; alıcının fidanların verim dönemine 3-4 yıl önceden ulaşması bu rakamın gizli avantajıdır.</div>
+    </div>
+
     <p class="price-quote">
       Bir gayrimenkulü satan tek şey: doğru fiyat.
       <span class="muted">Sizin beklentiniz ya da benim öngörüm değil — piyasanın o anki fiyatı.</span>
@@ -984,9 +1105,10 @@
         <div class="sc">
           <div class="sc-top">
             <span class="sc-lbl">Sabırlı</span>
-            <span class="sc-rate">110 TL/m²</span>
+            <span class="sc-rate">110 TL/m² + Hazır Bahçe</span>
           </div>
-          <div class="sc-price">643.000 TL</div>
+          <div class="sc-price">883.000 TL</div>
+          <div class="sc-breakdown">Arazi 643.000 + Hazır bahçe 240.000 TL</div>
           <div class="sc-desc">Üst banda yakın. Doğru alıcıyı beklerken yayında uzun kalır.</div>
         </div>
 
@@ -994,18 +1116,20 @@
           <span class="rec-tag">ÖNERİLEN</span>
           <div class="sc-top">
             <span class="sc-lbl">Dengeli</span>
-            <span class="sc-rate">98–100 TL/m²</span>
+            <span class="sc-rate">98–100 TL/m² + Hazır Bahçe</span>
           </div>
-          <div class="sc-price">575.000 – 585.000 TL</div>
+          <div class="sc-price">815.000 – 825.000 TL</div>
+          <div class="sc-breakdown">Arazi 575.000 – 585.000 + Hazır bahçe 240.000 TL</div>
           <div class="sc-desc">En yakın komşunun (S1) hemen altı. Doğal süreçte satar.</div>
         </div>
 
         <div class="sc">
           <div class="sc-top">
             <span class="sc-lbl">Hızlı Satış</span>
-            <span class="sc-rate">85 TL/m²</span>
+            <span class="sc-rate">85 TL/m² + Hazır Bahçe</span>
           </div>
-          <div class="sc-price">497.000 TL</div>
+          <div class="sc-price">737.000 TL</div>
+          <div class="sc-breakdown">Arazi 497.000 + Hazır bahçe 240.000 TL</div>
           <div class="sc-desc">Rakipleri geride bırakır ama ~80 bin TL daha az.</div>
         </div>
       </div>
@@ -1088,17 +1212,17 @@
 
     <div class="risk-text">
       <p>Mülk <strong>15.01.2025'te</strong> alınmış; <strong>5 yıl muafiyeti</strong> 16.01.2030'da dolar. O tarihten önceki satışta değer artış kazancı vergisi doğar. Tapuda <strong>10.000 TL alış bedeli</strong> beyan edilmiş olması, "satış − alış" farkını yüksek gösterir; bu da vergiyi büyütür. Gerçek alış bedelini gösteren belgeler varsa mali müşavir desteğiyle <strong>Yİ-ÜFE endeksleme</strong> uygulanarak vergi yükü azaltılabilir.</p>
-      <p>Aşağıdaki tablo, tapuda 575.000 TL beyan edileceği varsayımıyla hazırlanmış örnek bir hesaptır. Endeksleme dahil değildir.</p>
+      <p>Aşağıdaki tablo, tapuda 815.000 TL beyan edileceği varsayımıyla hazırlanmış örnek bir hesaptır. Endeksleme dahil değildir.</p>
     </div>
 
     <div class="tax">
       <h4>Vergi ve Maliyet Hesabı</h4>
-      <div class="sub">Tapu satış bedeli: <strong>575.000 TL</strong> (≈ <strong>98 TL/m²</strong>) · Tapu alış bedeli: <strong>10.000 TL</strong></div>
+      <div class="sub">Tapu satış bedeli: <strong>815.000 TL</strong> (Arazi 575.000 + Hazır Bahçe 240.000) · Tapu alış bedeli: <strong>10.000 TL</strong></div>
 
       <div class="tax-row">
         <div class="tx-lbl">Brüt Kazanç</div>
-        <div class="tx-desc">575.000 − 10.000</div>
-        <div class="tx-amt">565.000 TL</div>
+        <div class="tx-desc">815.000 − 10.000</div>
+        <div class="tx-amt">805.000 TL</div>
       </div>
       <div class="tax-row">
         <div class="tx-lbl">2026 İstisna</div>
@@ -1108,7 +1232,7 @@
       <div class="tax-row">
         <div class="tx-lbl">Vergiye Tabi Kazanç</div>
         <div class="tx-desc">İstisna sonrası matrah</div>
-        <div class="tx-amt">415.000 TL</div>
+        <div class="tx-amt">655.000 TL</div>
       </div>
 
       <div class="tax-div"></div>
@@ -1125,31 +1249,31 @@
       </div>
       <div class="tax-row">
         <div class="tx-lbl">Gelir Vergisi · %27</div>
-        <div class="tx-desc">400.000–415.000 arası 15.000 TL</div>
-        <div class="tx-amt">4.050 TL</div>
+        <div class="tx-desc">400.000–655.000 arası 255.000 TL</div>
+        <div class="tx-amt">68.850 TL</div>
       </div>
 
       <div class="tax-div"></div>
 
       <div class="tax-row">
         <div class="tx-lbl">Tapu Harcı (Satıcı)</div>
-        <div class="tx-desc">575.000 × %2</div>
-        <div class="tx-amt">11.500 TL</div>
+        <div class="tx-desc">815.000 × %2</div>
+        <div class="tx-amt">16.300 TL</div>
       </div>
       <div class="tax-row">
         <div class="tx-lbl">Komisyon + KDV</div>
-        <div class="tx-desc">575.000 × %2 + %20 KDV</div>
-        <div class="tx-amt">13.800 TL</div>
+        <div class="tx-desc">815.000 × %2 + %20 KDV</div>
+        <div class="tx-amt">19.560 TL</div>
       </div>
 
       <div class="tax-total">
         <div class="l">Toplam Kesinti</div>
-        <div class="a">99.850 TL</div>
+        <div class="a">175.210 TL</div>
       </div>
 
       <div class="tax-total net">
         <div class="l">Net Elinize Geçen</div>
-        <div class="a">475.150 TL</div>
+        <div class="a">639.790 TL</div>
       </div>
 
       <p class="tax-note"><strong>Not:</strong> Yİ-ÜFE endeksleme uygulanırsa vergi azalır. Ekspertiz, harç düzeltmesi, diğer giderler dahil değildir. Kesin beyan öncesi mali müşavir görüşü alınmalıdır.</p>
