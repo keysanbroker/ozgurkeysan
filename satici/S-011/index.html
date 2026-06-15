@@ -1,0 +1,510 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex, nofollow">
+<meta name="description" content="Mülkünüzün güncel satış süreci ve haftalık performans verileri.">
+
+<!-- WhatsApp / Facebook / LinkedIn link önizlemesi -->
+<meta property="og:type" content="website">
+<meta property="og:title" content="Haftalık Mülk Raporu">
+<meta property="og:description" content="Mülkünüzün güncel satış süreci ve haftalık performans verileri.">
+<meta property="og:site_name" content="Özgür İçdeş / Özgür Keysan · RE/MAX Force">
+<meta property="og:locale" content="tr_TR">
+
+<title>Satış Süreci · S-011 · Özgür İçdeş / Özgür Keysan</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --navy: #071D49; --heading: #1E3A7A; --red: #D62828; --red-deep: #B81F1F;
+    --ink: #101828; --ink-soft: #475467; --ink-faint: #667085;
+    --line: #E6E8EC; --line-soft: #F0F1F4; --bg: #FFFFFF; --bg-soft: #F8F9FB; --green: #16A34A;
+    --shadow-sm: 0 1px 3px rgba(16,24,40,0.06); --shadow-md: 0 4px 16px rgba(16,24,40,0.08);
+    --maxw: 1180px; --pad: 40px;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body { font-family: 'Roboto', -apple-system, sans-serif; color: var(--ink); background: var(--bg); line-height: 1.65; -webkit-font-smoothing: antialiased; font-size: 15px; }
+  h1, h2, h3, h4 { font-family: 'Poppins', sans-serif; color: var(--heading); font-weight: 600; letter-spacing: -0.01em; }
+  a { color: inherit; }
+  .wrap { max-width: var(--maxw); margin: 0 auto; padding: 0 var(--pad); }
+
+  .topbar { border-bottom: 1px solid var(--line); padding: 18px 0; background: rgba(255,255,255,0.94); backdrop-filter: saturate(180%) blur(8px); -webkit-backdrop-filter: saturate(180%) blur(8px); position: sticky; top: 0; z-index: 50; }
+  .topbar .wrap { display: flex; align-items: center; justify-content: space-between; gap: 24px; }
+  .brand { text-decoration: none; color: inherit; display: block; }
+  .brand .mark { font-family: 'Poppins', sans-serif; font-weight: 700; font-size: 19px; letter-spacing: 0.3px; color: var(--red); line-height: 1; }
+  .brand .nm { font-weight: 500; font-size: 17px; color: var(--ink); margin-right: 6px; }
+  .brand .sep { color: var(--ink-faint); margin: 0 10px; font-weight: 400; }
+  .brand .sub { font-family: 'Poppins', sans-serif; font-size: 11px; color: var(--ink-faint); margin-top: 7px; letter-spacing: 1.8px; font-weight: 500; text-transform: uppercase; }
+  .topbar .meta { font-family: 'Poppins', sans-serif; font-size: 13px; color: var(--ink-soft); font-weight: 500; letter-spacing: 0.3px; }
+
+  .cover { background: var(--bg-soft); padding: 64px 0 56px; border-bottom: 1px solid var(--line); }
+  .cover .eyebrow { font-family: 'Poppins', sans-serif; font-size: 11px; font-weight: 600; color: var(--red); letter-spacing: 2.5px; text-transform: uppercase; margin-bottom: 14px; }
+  .cover h1 { font-family: 'Poppins', sans-serif; font-size: 34px; font-weight: 600; color: var(--heading); line-height: 1.2; margin-bottom: 14px; }
+  .cover .intro { color: var(--ink-soft); font-size: 15px; max-width: 680px; line-height: 1.7; }
+  .cover-meta { display: flex; gap: 48px; margin-top: 32px; padding-top: 24px; border-top: 1px solid var(--line); font-size: 13px; flex-wrap: wrap; }
+  .cover-meta > div { display: flex; flex-direction: column; gap: 4px; }
+  .cover-meta .lbl { font-family: 'Poppins', sans-serif; font-size: 10px; font-weight: 600; color: var(--ink-faint); text-transform: uppercase; letter-spacing: 1.5px; }
+  .cover-meta .val { color: var(--ink); font-weight: 500; font-family: 'Poppins', sans-serif; }
+  .cover-brand .mini-mark { font-family: 'Poppins', sans-serif; font-weight: 700; font-size: 17px; letter-spacing: 0.3px; color: var(--red); line-height: 1; }
+  .cover-brand .mini-mark .nm { font-weight: 500; font-size: 15px; color: var(--ink); margin-right: 5px; }
+  .cover-brand .mini-mark .sep { color: var(--ink-faint); margin: 0 9px; font-weight: 400; }
+  .cover-brand .mini-sub { font-family: 'Poppins', sans-serif; font-size: 10px; color: var(--ink-faint); margin-top: 6px; letter-spacing: 1.6px; font-weight: 500; text-transform: uppercase; }
+
+  .panel { padding: 56px 0 32px; }
+  .panel-head { margin-bottom: 24px; padding-bottom: 16px; border-bottom: 2px solid var(--heading); }
+  .panel-head .eyebrow { font-family: 'Poppins', sans-serif; font-size: 11px; font-weight: 600; color: var(--red); text-transform: uppercase; letter-spacing: 2.5px; margin-bottom: 8px; }
+  .panel-head h2 { font-family: 'Poppins', sans-serif; font-size: 24px; color: var(--heading); font-weight: 600; letter-spacing: -0.01em; }
+  .panel-intro { font-size: 14px; color: var(--ink-soft); margin-bottom: 24px; max-width: 740px; line-height: 1.7; }
+
+  .property-card { background: #fff; border: 1px solid var(--line); border-top: 3px solid var(--red); border-radius: 6px; padding: 32px 36px; display: grid; grid-template-columns: 1fr auto; gap: 36px; align-items: center; box-shadow: var(--shadow-sm); }
+  .property-info h3 { font-family: 'Poppins', sans-serif; font-size: 24px; color: var(--heading); margin-bottom: 8px; font-weight: 600; }
+  .property-loc { font-size: 14px; color: var(--ink-soft); margin-bottom: 22px; }
+  .property-specs { display: flex; gap: 36px; flex-wrap: wrap; }
+  .spec-item { display: flex; flex-direction: column; gap: 4px; }
+  .spec-item .l { font-family: 'Poppins', sans-serif; font-size: 10px; color: var(--ink-faint); text-transform: uppercase; letter-spacing: 1.4px; font-weight: 600; }
+  .spec-item .v { font-family: 'Poppins', sans-serif; font-size: 16px; font-weight: 600; color: var(--ink); }
+  .property-price { text-align: right; padding-left: 36px; border-left: 1px solid var(--line); }
+  .property-price .l { font-family: 'Poppins', sans-serif; font-size: 10px; color: var(--ink-faint); text-transform: uppercase; letter-spacing: 1.4px; font-weight: 600; margin-bottom: 8px; }
+  .property-price .v { font-family: 'Poppins', sans-serif; font-size: 28px; font-weight: 700; color: var(--heading); line-height: 1; }
+
+  .quick-links { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+  .quick-link { display: flex; align-items: center; justify-content: space-between; background: #fff; border: 1px solid var(--line); border-radius: 6px; padding: 22px 26px; text-decoration: none; color: inherit; transition: border-color 0.15s, box-shadow 0.15s, transform 0.1s; }
+  .quick-link:hover { border-color: var(--heading); box-shadow: var(--shadow-sm); }
+  .quick-link:active { transform: translateY(1px); }
+  .quick-link-text { display: flex; flex-direction: column; }
+  .quick-link-eyebrow { font-family: 'Poppins', sans-serif; font-size: 10px; font-weight: 600; color: var(--red); letter-spacing: 1.8px; text-transform: uppercase; margin-bottom: 6px; }
+  .quick-link-title { font-family: 'Poppins', sans-serif; font-size: 16px; font-weight: 600; color: var(--heading); }
+  .quick-link-arrow { color: var(--ink-faint); font-size: 22px; transition: transform 0.15s, color 0.15s; font-family: 'Poppins', sans-serif; }
+  .quick-link:hover .quick-link-arrow { color: var(--red); transform: translateX(4px); }
+
+  .kpi-grid { display: grid; grid-template-columns: repeat(5, 1fr); gap: 12px; }
+  .kpi { background: #fff; border: 1px solid var(--line); border-radius: 6px; padding: 22px 22px 20px; }
+  .kpi.featured { border-top: 3px solid var(--red); }
+  .kpi-num { font-family: 'Poppins', sans-serif; font-size: 32px; font-weight: 700; color: var(--heading); line-height: 1; display: block; }
+  .kpi-label { font-family: 'Poppins', sans-serif; font-size: 11px; color: var(--ink-faint); text-transform: uppercase; letter-spacing: 1.5px; margin-top: 12px; font-weight: 600; }
+  .kpi-extra { font-size: 12px; color: var(--ink-soft); margin-top: 8px; padding-top: 8px; border-top: 1px solid var(--line); }
+  .kpi-extra strong { color: var(--red); font-family: 'Poppins', sans-serif; font-weight: 600; }
+  .kpi-delta { font-family: 'Poppins', sans-serif; font-size: 11px; margin-top: 10px; padding-top: 10px; border-top: 1px solid var(--line-soft); font-weight: 500; letter-spacing: 0.2px; }
+  .kpi-delta.positive { color: var(--green); }
+  .kpi-delta.negative { color: var(--red); }
+  .kpi-delta.neutral { color: var(--ink-faint); }
+
+  .week-marker { display: flex; align-items: center; gap: 12px; margin-bottom: 16px; }
+  .week-badge { font-family: 'Poppins', sans-serif; font-size: 10px; font-weight: 700; color: var(--red); background: rgba(214, 40, 40, 0.08); padding: 5px 11px; border-radius: 3px; letter-spacing: 1.4px; }
+  .week-date { font-family: 'Poppins', sans-serif; font-size: 13px; color: var(--ink-soft); font-weight: 500; }
+
+  .history-subhead { margin-top: 48px; margin-bottom: 18px; padding-bottom: 14px; border-bottom: 1px solid var(--line); }
+  .history-subhead h3 { font-family: 'Poppins', sans-serif; font-size: 16px; color: var(--heading); font-weight: 600; margin-bottom: 4px; letter-spacing: -0.01em; }
+  .history-subhead p { font-size: 13px; color: var(--ink-faint); }
+  .history-table-wrap { background: #fff; border: 1px solid var(--line); border-radius: 6px; overflow-x: auto; box-shadow: var(--shadow-sm); }
+  .history-table { width: 100%; border-collapse: collapse; font-size: 14px; min-width: 720px; }
+  .history-table thead { background: var(--bg-soft); }
+  .history-table th { text-align: right; font-family: 'Poppins', sans-serif; font-size: 10px; font-weight: 600; color: var(--ink-faint); text-transform: uppercase; letter-spacing: 1.3px; padding: 14px 18px; border-bottom: 1px solid var(--line); white-space: nowrap; }
+  .history-table th:first-child { text-align: left; }
+  .history-table td { padding: 16px 18px; text-align: right; font-family: 'Poppins', sans-serif; font-weight: 500; color: var(--ink); border-bottom: 1px solid var(--line-soft); white-space: nowrap; }
+  .history-table td:first-child { text-align: left; color: var(--ink-soft); font-weight: 600; }
+  .history-table tbody tr:last-child td { border-bottom: none; }
+  .history-table tr.current { background: rgba(214, 40, 40, 0.03); }
+  .history-table tr.current td { color: var(--ink); font-weight: 600; }
+  .history-table tr.current td:first-child { position: relative; color: var(--heading); }
+  .history-table tr.current td:first-child::before { content: ''; position: absolute; left: 0; top: 0; bottom: 0; width: 3px; background: var(--red); }
+  .row-tag { display: inline-block; font-family: 'Poppins', sans-serif; font-size: 9px; font-weight: 700; color: var(--red); background: rgba(214, 40, 40, 0.1); padding: 2px 7px; border-radius: 3px; letter-spacing: 1.2px; margin-right: 10px; vertical-align: middle; }
+
+  .offer-list { display: flex; flex-direction: column; gap: 10px; }
+  .offer-card { background: #fff; border: 1px solid var(--line); border-radius: 6px; padding: 22px 24px; display: grid; grid-template-columns: 64px 1fr auto; gap: 24px; align-items: center; transition: border-color 0.15s, box-shadow 0.15s; }
+  .offer-card:hover { border-color: var(--heading); box-shadow: var(--shadow-sm); }
+  .offer-card.highest { border-color: rgba(214, 40, 40, 0.35); background: rgba(214, 40, 40, 0.015); border-top: 2px solid var(--red); }
+  .offer-num { font-family: 'Poppins', sans-serif; font-size: 16px; font-weight: 700; color: var(--red); text-align: center; letter-spacing: 0.5px; }
+  .offer-num .label { display: block; font-size: 9px; color: var(--ink-faint); font-weight: 500; letter-spacing: 1.2px; margin-bottom: 4px; }
+  .offer-info { min-width: 0; }
+  .offer-date { font-family: 'Poppins', sans-serif; font-size: 16px; font-weight: 600; color: var(--heading); margin-bottom: 7px; }
+  .offer-meta { font-size: 13px; color: var(--ink-soft); display: flex; flex-wrap: wrap; gap: 10px; align-items: center; }
+  .offer-badge { display: inline-block; font-size: 10px; font-weight: 600; padding: 3px 9px; border-radius: 3px; text-transform: uppercase; letter-spacing: 0.8px; font-family: 'Poppins', sans-serif; }
+  .offer-badge.pending { background: rgba(30, 58, 122, 0.08); color: var(--heading); }
+  .offer-badge.highest { background: rgba(214, 40, 40, 0.1); color: var(--red); }
+  .offer-badge.accepted { background: rgba(22, 163, 74, 0.1); color: var(--green); }
+  .offer-badge.rejected { background: var(--line-soft); color: var(--ink-faint); }
+  .offer-badge.withdrew { background: var(--line-soft); color: var(--ink-faint); font-style: italic; }
+  .offer-amount { font-family: 'Poppins', sans-serif; font-size: 22px; font-weight: 700; color: var(--ink); white-space: nowrap; text-align: right; }
+  .offer-amount.highest { color: var(--red); }
+
+  .timeline { position: relative; padding-left: 32px; }
+  .timeline::before { content: ''; position: absolute; left: 8px; top: 12px; bottom: 12px; width: 2px; background: var(--line); }
+  .timeline-item { position: relative; padding-bottom: 28px; }
+  .timeline-item:last-child { padding-bottom: 0; }
+  .timeline-item::before { content: ''; position: absolute; left: -32px; top: 4px; width: 18px; height: 18px; border-radius: 50%; background: #fff; border: 3px solid var(--red); z-index: 1; }
+  .timeline-date { font-family: 'Poppins', sans-serif; font-size: 11px; font-weight: 600; color: var(--ink-faint); text-transform: uppercase; letter-spacing: 1.3px; margin-bottom: 4px; }
+  .timeline-title { font-family: 'Poppins', sans-serif; font-size: 15px; font-weight: 600; color: var(--heading); margin-bottom: 4px; }
+  .timeline-detail { font-size: 14px; color: var(--ink-soft); line-height: 1.6; }
+
+  .kb-wrap { border: 1px solid var(--line); border-radius: 6px; overflow: hidden; background: #fff; box-shadow: var(--shadow-sm); position: relative; }
+  .kb-toolbar { display: flex; align-items: center; justify-content: space-between; padding: 14px 20px; border-bottom: 1px solid var(--line); background: var(--bg-soft); }
+  .kb-toolbar-title { font-family: 'Poppins', sans-serif; font-size: 13px; font-weight: 600; color: var(--heading); display: flex; align-items: center; gap: 10px; }
+  .kb-toolbar-title::before { content: ''; width: 8px; height: 8px; background: var(--red); border-radius: 50%; display: inline-block; }
+  .kb-fullscreen { background: var(--navy); color: #fff; border: none; padding: 8px 16px; border-radius: 4px; font-family: 'Poppins', sans-serif; font-size: 12px; font-weight: 600; cursor: pointer; letter-spacing: 0.3px; display: inline-flex; align-items: center; gap: 8px; transition: background 0.15s; }
+  .kb-fullscreen:hover { background: var(--heading); }
+  .kb-fullscreen svg { width: 14px; height: 14px; }
+  .kb-frame { width: 100%; height: 720px; border: none; display: block; background: var(--bg-soft); }
+  .kb-wrap:fullscreen .kb-frame, .kb-wrap:-webkit-full-screen .kb-frame { height: 100vh; }
+  .kb-wrap:fullscreen .kb-toolbar, .kb-wrap:-webkit-full-screen .kb-toolbar { display: none; }
+  .private-note { text-align: center; font-size: 12px; color: var(--ink-faint); margin: 40px 0 24px; font-style: italic; }
+
+  .site-footer { background: var(--bg-soft); border-top: 1px solid var(--line); padding: 64px 0 56px; margin-top: 32px; }
+  .contact-cards { display: flex; gap: 80px; justify-content: center; flex-wrap: wrap; }
+  .contact-card { text-align: center; min-width: 240px; }
+  .contact-name { font-family: 'Poppins', sans-serif; font-size: 22px; font-weight: 600; color: var(--heading); margin-bottom: 10px; letter-spacing: -0.01em; }
+  .contact-role { font-family: 'Roboto', sans-serif; font-size: 14px; color: var(--ink-soft); margin-bottom: 6px; }
+  .contact-office { font-family: 'Poppins', sans-serif; font-size: 11px; font-weight: 600; color: var(--ink-faint); letter-spacing: 1.8px; text-transform: uppercase; margin-bottom: 22px; }
+  .contact-phone { display: inline-flex; align-items: center; gap: 10px; padding: 11px 24px; background: #fff; border: 1px solid var(--line); border-radius: 999px; color: var(--heading); text-decoration: none; font-family: 'Poppins', sans-serif; font-weight: 600; font-size: 15px; letter-spacing: 0.2px; transition: border-color 0.15s, box-shadow 0.15s, transform 0.1s; }
+  .contact-phone:hover { border-color: var(--red); box-shadow: var(--shadow-sm); }
+  .contact-phone:active { transform: translateY(1px); }
+  .contact-phone svg { width: 15px; height: 15px; stroke: var(--ink-soft); }
+
+  @media (max-width: 940px) {
+    :root { --pad: 28px; }
+    .cover h1 { font-size: 28px; }
+    .panel-head h2 { font-size: 20px; }
+    .kpi-grid { grid-template-columns: repeat(2, 1fr); }
+    .property-card { grid-template-columns: 1fr; gap: 24px; }
+    .property-price { padding-left: 0; border-left: none; border-top: 1px solid var(--line); padding-top: 24px; text-align: left; }
+  }
+  @media (max-width: 720px) {
+    :root { --pad: 20px; }
+    .topbar { padding: 14px 0; }
+    .brand .mark { font-size: 16px; }
+    .brand .nm { font-size: 14px; }
+    .topbar .meta { font-size: 12px; }
+    .cover { padding: 44px 0 36px; }
+    .cover h1 { font-size: 24px; }
+    .cover-meta { gap: 24px; }
+    .panel { padding: 44px 0 24px; }
+    .property-card { padding: 24px 22px; }
+    .property-specs { gap: 24px; }
+    .quick-links { grid-template-columns: 1fr; }
+    .kpi-grid { grid-template-columns: 1fr; }
+    .kb-frame { height: 520px; }
+    .offer-card { grid-template-columns: 1fr; gap: 14px; padding: 18px 20px; }
+    .offer-num { text-align: left; }
+    .offer-amount { text-align: left; }
+    .site-footer { padding: 48px 0 40px; }
+    .contact-cards { gap: 40px; flex-direction: column; }
+  }
+</style>
+</head>
+<body>
+
+<header class="topbar">
+  <div class="wrap">
+    <a class="brand" href="https://ozgurkeysan.com" target="_blank" rel="noopener">
+      <div class="mark"><span class="nm">Özgür</span>İÇDEŞ<span class="sep">/</span><span class="nm">Özgür</span>KEYSAN</div>
+      <div class="sub">RE/MAX FORCE · DENİZLİ</div>
+    </a>
+    <div class="meta">15.06.2026</div>
+  </div>
+</header>
+
+<section class="cover">
+  <div class="wrap">
+    <div class="eyebrow">SATIŞ SÜRECİ · PERFORMANS RAPORU</div>
+    <h1>Sayın Meltem Hanım,</h1>
+    <p class="intro">
+      Mülkünüze ait satış sürecinin güncel durumu, ilan performansı ve şu ana kadar
+      yürütülen çalışmalar aşağıda yer almaktadır. Sayfa, süreç ilerledikçe güncel kalacak şekilde
+      yönetilmektedir.
+    </p>
+    <div class="cover-meta">
+      <div class="cover-brand">
+        <div class="mini-mark"><span class="nm">Özgür</span>İÇDEŞ<span class="sep">/</span><span class="nm">Özgür</span>KEYSAN</div>
+        <div class="mini-sub">RE/MAX FORCE · DENİZLİ</div>
+      </div>
+      <div>
+        <span class="lbl">Son Güncelleme</span>
+        <span class="val">15 Haziran 2026</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="panel">
+  <div class="wrap">
+    <div class="panel-head">
+      <div class="eyebrow">MÜLK BİLGİLERİ</div>
+      <h2>Karabedirler Köy Evi</h2>
+    </div>
+    <div class="property-card">
+      <div class="property-info">
+        <h3>206 m² Arsa İçinde Yatırımlık Köy Evi</h3>
+        <p class="property-loc">Denizli / Çivril / Karabedirler</p>
+        <div class="property-specs">
+          <div class="spec-item">
+            <span class="l">Arsa Alanı</span>
+            <span class="v">206 m²</span>
+          </div>
+          <div class="spec-item">
+            <span class="l">Yapı Tipi</span>
+            <span class="v">Köy Evi</span>
+          </div>
+          <div class="spec-item">
+            <span class="l">Kullanım</span>
+            <span class="v">Yatırımlık Konut</span>
+          </div>
+          <div class="spec-item">
+            <span class="l">Portföy Kodu</span>
+            <span class="v">P-025</span>
+          </div>
+        </div>
+      </div>
+      <div class="property-price">
+        <div class="l">Listeleme Fiyatı</div>
+        <div class="v">₺ 390.000</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="panel">
+  <div class="wrap">
+    <div class="panel-head">
+      <div class="eyebrow">DOKÜMANLAR VE LİNKLER</div>
+      <h2>Hızlı Erişim</h2>
+    </div>
+    <div class="quick-links">
+      <a href="https://www.sahibinden.com/ilan/emlak-konut-satilik-civril-karabedirlerde-206-m2-arsa-icinde-yatirimlik-koy-evi-1321515777/detay/" target="_blank" rel="noopener" class="quick-link">
+        <div class="quick-link-text">
+          <span class="quick-link-eyebrow">YAYINDAKİ İLAN</span>
+          <span class="quick-link-title">Sahibinden.com İlanı</span>
+        </div>
+        <span class="quick-link-arrow">→</span>
+      </a>
+      <a href="https://ozgurkeysan.com/rapor/p025-h8n3p/" target="_blank" rel="noopener" class="quick-link">
+        <div class="quick-link-text">
+          <span class="quick-link-eyebrow">DEĞERLEME</span>
+          <span class="quick-link-title">Fiyat Analiz ve Satış Planı</span>
+        </div>
+        <span class="quick-link-arrow">→</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<section class="panel">
+  <div class="wrap">
+    <div class="panel-head">
+      <div class="eyebrow">SAHİBİNDEN.COM PERFORMANSI</div>
+      <h2>İlan Performansı</h2>
+    </div>
+    <p class="panel-intro">
+      İlan yayına alındığından bu yana Sahibinden.com üzerindeki güncel etkileşim verileri.
+      Veriler her hafta güncellenir; aşağıdaki tabloda önceki haftaların verileri de birikecektir.
+    </p>
+
+    <div class="week-marker">
+      <span class="week-badge">BU HAFTA</span>
+      <span class="week-date">15 Haziran 2026</span>
+    </div>
+
+    <div class="kpi-grid">
+      <div class="kpi">
+        <span class="kpi-num">647</span>
+        <div class="kpi-label">Görüntülenme</div>
+        <div class="kpi-delta neutral">geçen haftaya göre: —</div>
+      </div>
+      <div class="kpi">
+        <span class="kpi-num">9</span>
+        <div class="kpi-label">Favori</div>
+        <div class="kpi-delta neutral">geçen haftaya göre: —</div>
+      </div>
+      <div class="kpi">
+        <span class="kpi-num">1</span>
+        <div class="kpi-label">Mesaj</div>
+        <div class="kpi-delta neutral">geçen haftaya göre: —</div>
+      </div>
+      <div class="kpi">
+        <span class="kpi-num">0</span>
+        <div class="kpi-label">Bildirim</div>
+        <div class="kpi-delta neutral">geçen haftaya göre: —</div>
+      </div>
+      <div class="kpi featured">
+        <span class="kpi-num">1</span>
+        <div class="kpi-label">Teklif</div>
+        <div class="kpi-extra">En yüksek: <strong>₺ 300.000</strong></div>
+      </div>
+    </div>
+
+    <div class="history-subhead">
+      <h3>Haftalık Performans Geçmişi</h3>
+      <p>Her haftanın metrikleri buraya birikir. En yeni hafta üstte yer alır.</p>
+    </div>
+
+    <div class="history-table-wrap">
+      <table class="history-table">
+        <thead>
+          <tr>
+            <th>Hafta</th>
+            <th>Görüntülenme</th>
+            <th>Favori</th>
+            <th>Mesaj</th>
+            <th>Bildirim</th>
+            <th>Teklif</th>
+            <th>En Yüksek Teklif</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="current">
+            <td><span class="row-tag">BU HAFTA</span>15 Haz 2026</td>
+            <td>647</td>
+            <td>9</td>
+            <td>1</td>
+            <td>0</td>
+            <td>1</td>
+            <td>₺ 300.000</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<section class="panel">
+  <div class="wrap">
+    <div class="panel-head">
+      <div class="eyebrow">GELEN TEKLİFLER</div>
+      <h2>Teklif Geçmişi</h2>
+    </div>
+    <p class="panel-intro">
+      Mülkünüz için gelen teklifler ve mevcut durumları aşağıda listelenir. Birden fazla
+      teklif geldiğinde en yüksek aktif teklif üstte vurgulu olarak yer alır.
+    </p>
+
+    <div class="offer-list">
+      <article class="offer-card highest">
+        <div class="offer-num"><span class="label">TEKLİF</span>#1</div>
+        <div class="offer-info">
+          <div class="offer-date">12 Mayıs 2026</div>
+          <div class="offer-meta">
+            <span class="offer-badge highest">EN YÜKSEK</span>
+            <span class="offer-badge pending">BEKLİYOR</span>
+            <span>Liste bedelinin %77'si</span>
+          </div>
+        </div>
+        <div class="offer-amount highest">₺ 300.000</div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="panel">
+  <div class="wrap">
+    <div class="panel-head">
+      <div class="eyebrow">SÜREÇ TAKVİMİ</div>
+      <h2>Şu Ana Kadar Yapılanlar</h2>
+    </div>
+    <p class="panel-intro">
+      Mülkün listelenmesinden bugüne kadar yürütülen tüm çalışmalar kronolojik sırayla
+      aşağıda yer almaktadır.
+    </p>
+    <div class="timeline">
+      <div class="timeline-item">
+        <div class="timeline-date">[TARİH]</div>
+        <div class="timeline-title">Portföy Analiz ve Satış Planı Hazırlandı</div>
+        <div class="timeline-detail">
+          Mülkün konum, alan ve bölgedeki emsal satış değerleri analiz edilerek
+          piyasa fiyatlandırma çalışması tamamlandı.
+        </div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-date">[TARİH]</div>
+        <div class="timeline-title">Sahibinden.com İlanı Yayına Alındı</div>
+        <div class="timeline-detail">
+          İlan başlığı, kategori filtreleri ve açıklama metni piyasa aramalarına optimize edilerek
+          yayına alındı.
+        </div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-date">12 Mayıs 2026</div>
+        <div class="timeline-title">İlk Teklif Alındı</div>
+        <div class="timeline-detail">
+          Mülkünüz için ₺300.000 tutarında ilk teklif iletildi (liste bedelinin %77'si).
+          Görüşme süreci devam ediyor.
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="panel">
+  <div class="wrap">
+    <div class="panel-head">
+      <div class="eyebrow">PORTFÖY HARİTASI</div>
+      <h2>Keysan Broker Sisteminde Mülkünüz</h2>
+    </div>
+    <p class="panel-intro">
+      Mülkünüze ait konum verisi, çevre analizi ve detaylı bilgileri aşağıdaki ekrandan
+      görüntüleyebilirsiniz. Tam ekran modunda daha rahat inceleyebilirsiniz.
+    </p>
+    <div class="kb-wrap" id="kbWrap">
+      <div class="kb-toolbar">
+        <div class="kb-toolbar-title">Canlı Portföy Görünümü</div>
+        <button class="kb-fullscreen" onclick="toggleFullscreen()">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M3 7V3h4M21 7V3h-4M3 17v4h4M21 17v4h-4"/>
+          </svg>
+          Tam Ekran
+        </button>
+      </div>
+      <iframe class="kb-frame" id="kbFrame" src="https://map.keysanbroker.com/?paylasim=dy3qfd9lav" title="Keysan Broker Portföy"></iframe>
+    </div>
+    <p class="private-note">
+      Bu sayfa yalnızca size özel olarak hazırlanmıştır. Arama motorlarında listelenmez, sadece bu link üzerinden erişilir.
+    </p>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="contact-cards">
+      <div class="contact-card">
+        <div class="contact-name">Özgür İçdeş</div>
+        <div class="contact-role">Gayrimenkul Danışmanı</div>
+        <div class="contact-office">RE/MAX FORCE DENİZLİ</div>
+        <a href="tel:+905533965426" class="contact-phone">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
+          </svg>
+          +90 553 396 54 26
+        </a>
+      </div>
+      <div class="contact-card">
+        <div class="contact-name">Özgür Keysan</div>
+        <div class="contact-role">Harita ve Kadastro Mühendisi</div>
+        <div class="contact-office">RE/MAX FORCE DENİZLİ</div>
+        <a href="tel:+905321717981" class="contact-phone">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
+          </svg>
+          +90 532 171 79 81
+        </a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script>
+  function toggleFullscreen() {
+    const wrap = document.getElementById('kbWrap');
+    if (!document.fullscreenElement && !document.webkitFullscreenElement) {
+      if (wrap.requestFullscreen) wrap.requestFullscreen();
+      else if (wrap.webkitRequestFullscreen) wrap.webkitRequestFullscreen();
+    } else {
+      if (document.exitFullscreen) document.exitFullscreen();
+      else if (document.webkitExitFullscreen) document.webkitExitFullscreen();
+    }
+  }
+</script>
+
+</body>
+</html>
