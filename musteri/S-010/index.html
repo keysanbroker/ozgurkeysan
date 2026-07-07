@@ -46,7 +46,7 @@
   .cover h1 { font-family: 'Poppins', sans-serif; font-size: 34px; font-weight: 600; color: var(--heading); line-height: 1.2; margin-bottom: 14px; }
   .cover .intro { color: var(--ink-soft); font-size: 15px; max-width: 720px; line-height: 1.7; }
   .cover-meta { display: flex; gap: 48px; margin-top: 32px; padding-top: 24px; border-top: 1px solid var(--line); font-size: 13px; flex-wrap: wrap; }
-  .cover-meta div { display: flex; flex-direction: column; gap: 4px; }
+  .cover-meta > div { display: flex; flex-direction: column; gap: 4px; }
   .cover-meta .lbl { font-family: 'Poppins', sans-serif; font-size: 10px; font-weight: 600; color: var(--ink-faint); text-transform: uppercase; letter-spacing: 1.5px; }
   .cover-meta .val { color: var(--ink); font-weight: 500; font-family: 'Poppins', sans-serif; }
   .cover-brand .mini-mark { font-family: 'Poppins', sans-serif; font-weight: 700; font-size: 17px; letter-spacing: 0.3px; color: var(--red); line-height: 1; }
@@ -76,7 +76,7 @@
   .kpi-label { font-family: 'Poppins', sans-serif; font-size: 11px; color: var(--ink-faint); text-transform: uppercase; letter-spacing: 1.5px; margin-top: 12px; font-weight: 600; }
   .kpi-extra { font-size: 12px; color: var(--ink-soft); margin-top: 8px; padding-top: 8px; border-top: 1px solid var(--line); }
   .kpi-extra strong { color: var(--red); font-family: 'Poppins', sans-serif; font-weight: 600; }
-  .kpi-delta { font-family: 'Poppins', sans-serif; font-size: 11px; margin-top: 10px; padding-top: 10px; border-top: 1px solid var(--line-soft); font-weight: 500; letter-spacing: 0.2px; }
+  .kpi-delta { font-family: 'Poppins', sans-serif; font-size: 11px; margin-top: 10px; padding-top: 10px; border-top: 1px solid var(--line-soft); font-weight: 600; letter-spacing: 0.2px; }
   .kpi-delta.positive { color: var(--green); }
   .kpi-delta.negative { color: var(--red); }
   .kpi-delta.neutral { color: var(--ink-faint); }
@@ -101,8 +101,28 @@
   .history-table tr.current td:first-child { position: relative; color: var(--heading); }
   .history-table tr.current td:first-child::before { content: ''; position: absolute; left: 0; top: 0; bottom: 0; width: 3px; background: var(--red); }
   .row-tag { display: inline-block; font-family: 'Poppins', sans-serif; font-size: 9px; font-weight: 700; color: var(--red); background: rgba(214, 40, 40, 0.1); padding: 2px 7px; border-radius: 3px; letter-spacing: 1.2px; margin-right: 10px; vertical-align: middle; }
+  .row-tag.first { color: var(--ink-faint); background: var(--line-soft); }
 
-  /* İLAN KARTI (M-001 stilinde + metrik satırı) */
+  /* KARŞILAŞTIRMA */
+  .compare-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; }
+  .compare-item { background: #fff; border: 1px solid var(--line); border-radius: 6px; padding: 22px 24px; display: flex; flex-direction: column; }
+  .compare-item.highlight { border-top: 3px solid var(--red); }
+  .compare-label { font-family: 'Poppins', sans-serif; font-size: 10px; font-weight: 600; color: var(--ink-faint); letter-spacing: 1.5px; text-transform: uppercase; margin-bottom: 16px; }
+  .compare-values { display: flex; align-items: center; gap: 12px; margin-bottom: 14px; flex: 1; }
+  .compare-then, .compare-now { display: flex; flex-direction: column; gap: 5px; flex: 1; min-width: 0; }
+  .compare-then-lbl, .compare-now-lbl { font-family: 'Poppins', sans-serif; font-size: 9px; font-weight: 700; letter-spacing: 1.2px; text-transform: uppercase; color: var(--ink-faint); }
+  .compare-then-val { font-family: 'Poppins', sans-serif; font-size: 22px; font-weight: 700; line-height: 1; color: var(--ink-soft); }
+  .compare-now-val { font-family: 'Poppins', sans-serif; font-size: 22px; font-weight: 700; line-height: 1; color: var(--heading); }
+  .compare-item.highlight .compare-then-val,
+  .compare-item.highlight .compare-now-val { font-size: 17px; }
+  .compare-arrow { color: var(--ink-faint); font-size: 16px; margin-top: 12px; font-family: 'Poppins', sans-serif; }
+  .compare-delta { font-family: 'Poppins', sans-serif; font-size: 20px; font-weight: 600; padding-top: 14px; margin-top: 4px; border-top: 1px solid var(--line-soft); letter-spacing: -0.01em; line-height: 1.25; }
+  .compare-delta.positive { color: var(--green); }
+  .compare-delta.negative { color: var(--red); }
+  .compare-delta.neutral { color: var(--ink-faint); font-size: 15px; font-weight: 500; }
+  .compare-delta.info { color: var(--heading); font-size: 15px; font-weight: 500; }
+
+  /* İLAN KARTI */
   .listing { background: #fff; border: 1px solid var(--line); border-radius: 6px; padding: 20px 24px; margin-bottom: 10px; display: grid; grid-template-columns: 56px 1fr auto; gap: 24px; align-items: center; transition: border-color 0.15s, box-shadow 0.15s; }
   .listing:hover { border-color: var(--heading); box-shadow: var(--shadow-sm); }
   .listing-num { font-family: 'Poppins', sans-serif; font-size: 14px; font-weight: 700; color: var(--red); text-align: center; letter-spacing: 0.5px; }
@@ -114,14 +134,19 @@
   .badge { display: inline-block; font-size: 10px; font-weight: 600; padding: 3px 9px; border-radius: 3px; text-transform: uppercase; letter-spacing: 0.8px; font-family: 'Poppins', sans-serif; }
   .badge.active { background: rgba(22, 163, 74, 0.1); color: var(--green); }
   .badge.road { background: rgba(30, 58, 122, 0.08); color: var(--heading); }
-  .listing-stats { display: flex; gap: 18px; margin-top: 10px; font-size: 13px; color: var(--ink-soft); font-family: 'Poppins', sans-serif; font-weight: 500; }
+  .listing-stats { display: flex; gap: 18px; margin-top: 10px; font-size: 13px; color: var(--ink-soft); font-family: 'Poppins', sans-serif; font-weight: 500; flex-wrap: wrap; }
   .listing-stats .stat { display: inline-flex; align-items: center; gap: 6px; }
   .listing-stats .stat svg { width: 13px; height: 13px; stroke: var(--ink-faint); fill: none; stroke-width: 2; }
   .listing-stats .stat.has-msg { color: var(--red); }
   .listing-stats .stat.has-msg svg { stroke: var(--red); }
-  .listing-right { display: flex; flex-direction: column; align-items: flex-end; gap: 10px; min-width: 180px; }
-  .listing-price { font-family: 'Poppins', sans-serif; font-size: 17px; font-weight: 700; color: var(--ink); white-space: nowrap; }
-  .listing-actions { display: flex; gap: 6px; }
+  .listing-stats .stat.has-bild { color: var(--red); }
+  .listing-stats .stat.has-bild svg { stroke: var(--red); fill: var(--red); }
+  .listing-right { display: flex; flex-direction: column; align-items: flex-end; gap: 6px; min-width: 180px; }
+  .listing-price { font-family: 'Poppins', sans-serif; font-size: 18px; font-weight: 700; color: var(--ink); white-space: nowrap; line-height: 1.1; }
+  .listing-price-old { font-family: 'Poppins', sans-serif; font-size: 12px; font-weight: 500; white-space: nowrap; }
+  .listing-price-old .old-val { color: var(--ink-faint); text-decoration: line-through; margin-right: 8px; }
+  .listing-price-old .delta-val { color: var(--red); font-weight: 700; font-size: 12.5px; letter-spacing: 0.2px; }
+  .listing-actions { display: flex; gap: 6px; margin-top: 4px; }
   .btn { display: inline-flex; align-items: center; padding: 7px 14px; border-radius: 4px; text-decoration: none; font-size: 12px; font-weight: 600; font-family: 'Poppins', sans-serif; letter-spacing: 0.3px; transition: opacity 0.15s, transform 0.1s; white-space: nowrap; }
   .btn:hover { opacity: 0.88; }
   .btn:active { transform: translateY(1px); }
@@ -141,9 +166,11 @@
   .offer-badge { display: inline-block; font-size: 10px; font-weight: 600; padding: 3px 9px; border-radius: 3px; text-transform: uppercase; letter-spacing: 0.8px; font-family: 'Poppins', sans-serif; }
   .offer-badge.pending { background: rgba(30, 58, 122, 0.08); color: var(--heading); }
   .offer-badge.highest { background: rgba(214, 40, 40, 0.1); color: var(--red); }
+  .offer-badge.unknown { background: var(--line-soft); color: var(--ink-faint); font-style: italic; }
   .offer-detail { font-size: 13px; color: var(--ink-soft); margin-top: 12px; padding-top: 12px; border-top: 1px solid var(--line-soft); line-height: 1.7; }
   .offer-detail strong { color: var(--ink); font-family: 'Poppins', sans-serif; font-weight: 600; }
   .offer-amount { font-family: 'Poppins', sans-serif; font-size: 22px; font-weight: 700; color: var(--red); white-space: nowrap; text-align: right; }
+  .offer-amount.muted { color: var(--ink-faint); font-size: 16px; font-weight: 500; font-style: italic; }
   .offer-amount .ppm { font-size: 13px; font-weight: 500; color: var(--ink-faint); margin-left: 2px; }
 
   /* TIMELINE */
@@ -186,6 +213,7 @@
     .cover h1 { font-size: 28px; }
     .panel-head h2 { font-size: 20px; }
     .kpi-grid { grid-template-columns: repeat(2, 1fr); }
+    .compare-grid { grid-template-columns: repeat(2, 1fr); }
   }
   @media (max-width: 720px) {
     :root { --pad: 20px; }
@@ -201,9 +229,10 @@
     .summary-num { font-size: 26px; }
     .panel { padding: 44px 0 24px; }
     .kpi-grid { grid-template-columns: 1fr; }
+    .compare-grid { grid-template-columns: 1fr; }
     .listing { grid-template-columns: 1fr; gap: 14px; padding: 18px 20px; }
     .listing-num { text-align: left; }
-    .listing-right { align-items: flex-start; min-width: 0; width: 100%; flex-direction: row; justify-content: space-between; flex-wrap: wrap; }
+    .listing-right { align-items: flex-start; min-width: 0; width: 100%; }
     .offer-card { grid-template-columns: 1fr; gap: 14px; padding: 18px 20px; }
     .offer-num { text-align: left; }
     .offer-amount { text-align: left; }
@@ -222,7 +251,7 @@
       <div class="mark"><span class="nm">Özgür</span>İÇDEŞ<span class="sep">/</span><span class="nm">Özgür</span>KEYSAN</div>
       <div class="sub">RE/MAX FORCE · DENİZLİ</div>
     </a>
-    <div class="meta">15.06.2026</div>
+    <div class="meta">07.07.2026</div>
   </div>
 </header>
 
@@ -233,45 +262,13 @@
     <h1>Sayın Muktedir Bey,</h1>
     <p class="intro">
       Portföyünüzü oluşturan 12 ilanın güncel satış süreci, ilan bazlı performans verileri ve şu ana kadar
-      alınan teklifler aşağıda yer almaktadır. Sayfa her hafta güncellenir; geçmiş veriler tabloda birikir.
+      alınan teklifler aşağıda yer almaktadır. İlk rapor tarihinden bu yana yaşanan gelişim de karşılaştırma
+      panelinde detaylı olarak sunulmuştur.
     </p>
     <div class="cover-meta">
-      <div class="cover-brand">
-        <div class="mini-mark"><span class="nm">Özgür</span>İÇDEŞ<span class="sep">/</span><span class="nm">Özgür</span>KEYSAN</div>
-        <div class="mini-sub">RE/MAX FORCE · DENİZLİ</div>
-      </div>
       <div>
         <span class="lbl">Son Güncelleme</span>
-        <span class="val">15 Haziran 2026</span>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ÖZET -->
-<section class="summary-section">
-  <div class="wrap">
-    <div class="summary-card">
-      <div class="summary-row">
-        <div class="summary-item">
-          <span class="summary-num">12</span>
-          <div class="summary-label">Aktif İlan</div>
-        </div>
-        <div class="summary-divider"></div>
-        <div class="summary-item">
-          <span class="summary-num">176.700<span class="unit">m²</span></span>
-          <div class="summary-label">Toplam Alan</div>
-        </div>
-        <div class="summary-divider"></div>
-        <div class="summary-item">
-          <span class="summary-num">2</span>
-          <div class="summary-label">Mahalle</div>
-        </div>
-        <div class="summary-divider"></div>
-        <div class="summary-item">
-          <span class="summary-num">₺ 18.005.000</span>
-          <div class="summary-label">Toplam Liste Bedeli</div>
-        </div>
+        <span class="val">7 Temmuz 2026</span>
       </div>
     </div>
   </div>
@@ -285,73 +282,148 @@
       <h2>Tüm İlanların Birleşik Verileri</h2>
     </div>
     <p class="panel-intro">
-      12 ilanın Sahibinden.com üzerindeki etkileşim verilerinin toplamı. Veriler her hafta güncellenir;
-      aşağıdaki tabloda önceki haftaların toplamları birikir.
+      12 ilanın Sahibinden.com üzerindeki etkileşim verilerinin toplamı. Aşağıdaki değerler bu haftaya aittir;
+      önceki haftaların verileri tabloda birikir.
     </p>
 
     <div class="week-marker">
-      <span class="week-badge">BU HAFTA</span>
-      <span class="week-date">15 Haziran 2026</span>
+      <span class="week-date">7 Temmuz 2026 verileri</span>
     </div>
 
     <div class="kpi-grid">
       <div class="kpi">
-        <span class="kpi-num">1.813</span>
+        <span class="kpi-num">2.851</span>
         <div class="kpi-label">Toplam Görüntülenme</div>
-        <div class="kpi-delta neutral">geçen haftaya göre: —</div>
       </div>
       <div class="kpi">
-        <span class="kpi-num">10</span>
+        <span class="kpi-num">31</span>
         <div class="kpi-label">Toplam Favori</div>
-        <div class="kpi-delta neutral">geçen haftaya göre: —</div>
       </div>
       <div class="kpi">
-        <span class="kpi-num">6</span>
+        <span class="kpi-num">8</span>
         <div class="kpi-label">Toplam Mesaj</div>
-        <div class="kpi-delta neutral">geçen haftaya göre: —</div>
       </div>
       <div class="kpi">
-        <span class="kpi-num">0</span>
+        <span class="kpi-num">7</span>
         <div class="kpi-label">Toplam Bildirim</div>
-        <div class="kpi-delta neutral">geçen haftaya göre: —</div>
       </div>
       <div class="kpi featured">
-        <span class="kpi-num">1</span>
+        <span class="kpi-num">3</span>
         <div class="kpi-label">Toplam Teklif</div>
-        <div class="kpi-extra">En yüksek: <strong>₺30/m²</strong></div>
+        <div class="kpi-extra"><strong>₺30/m²</strong></div>
       </div>
     </div>
+  </div>
+</section>
 
-    <div class="history-subhead">
-      <h3>Haftalık Performans Geçmişi</h3>
-      <p>Her haftanın toplam metrikleri buraya birikir. En yeni hafta üstte yer alır.</p>
+<!-- KARŞILAŞTIRMA -->
+<section class="panel">
+  <div class="wrap">
+    <div class="panel-head">
+      <div class="eyebrow">İLK RAPOR'DAN BU YANA GELİŞİM</div>
+      <h2>3 Haftalık Süreç Karşılaştırması</h2>
     </div>
+    <p class="panel-intro">
+      Portföyünüzün ilk raporlandığı 15 Haziran 2026'dan bugüne kadarki gelişim. Piyasa geri
+      bildirimlerine dayalı fiyat optimizasyonu sonrasında ilan performansındaki artış aşağıda görülebilir.
+    </p>
 
-    <div class="history-table-wrap">
-      <table class="history-table">
-        <thead>
-          <tr>
-            <th>Hafta</th>
-            <th>Görüntülenme</th>
-            <th>Favori</th>
-            <th>Mesaj</th>
-            <th>Bildirim</th>
-            <th>Teklif</th>
-            <th>En Yüksek Teklif</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr class="current">
-            <td><span class="row-tag">BU HAFTA</span>15 Haz 2026</td>
-            <td>1.813</td>
-            <td>10</td>
-            <td>6</td>
-            <td>0</td>
-            <td>1</td>
-            <td>₺30/m²</td>
-          </tr>
-        </tbody>
-      </table>
+    <div class="compare-grid">
+      <div class="compare-item">
+        <div class="compare-label">Toplam Görüntülenme</div>
+        <div class="compare-values">
+          <div class="compare-then">
+            <span class="compare-then-lbl">İlk Rapor</span>
+            <span class="compare-then-val">1.813</span>
+          </div>
+          <div class="compare-arrow">→</div>
+          <div class="compare-now">
+            <span class="compare-now-lbl">Bu Hafta</span>
+            <span class="compare-now-val">2.851</span>
+          </div>
+        </div>
+        <div class="compare-delta positive">▲ +1.038 (%57 artış)</div>
+      </div>
+
+      <div class="compare-item">
+        <div class="compare-label">Toplam Favori</div>
+        <div class="compare-values">
+          <div class="compare-then">
+            <span class="compare-then-lbl">İlk Rapor</span>
+            <span class="compare-then-val">10</span>
+          </div>
+          <div class="compare-arrow">→</div>
+          <div class="compare-now">
+            <span class="compare-now-lbl">Bu Hafta</span>
+            <span class="compare-now-val">31</span>
+          </div>
+        </div>
+        <div class="compare-delta positive">▲ +21 (%210 artış)</div>
+      </div>
+
+      <div class="compare-item">
+        <div class="compare-label">Toplam Mesaj</div>
+        <div class="compare-values">
+          <div class="compare-then">
+            <span class="compare-then-lbl">İlk Rapor</span>
+            <span class="compare-then-val">6</span>
+          </div>
+          <div class="compare-arrow">→</div>
+          <div class="compare-now">
+            <span class="compare-now-lbl">Bu Hafta</span>
+            <span class="compare-now-val">8</span>
+          </div>
+        </div>
+        <div class="compare-delta positive">▲ +2 (%33 artış)</div>
+      </div>
+
+      <div class="compare-item">
+        <div class="compare-label">Toplam Bildirim</div>
+        <div class="compare-values">
+          <div class="compare-then">
+            <span class="compare-then-lbl">İlk Rapor</span>
+            <span class="compare-then-val">0</span>
+          </div>
+          <div class="compare-arrow">→</div>
+          <div class="compare-now">
+            <span class="compare-now-lbl">Bu Hafta</span>
+            <span class="compare-now-val">7</span>
+          </div>
+        </div>
+        <div class="compare-delta positive">▲ +7 bildirim takibi</div>
+      </div>
+
+      <div class="compare-item">
+        <div class="compare-label">Toplam Teklif</div>
+        <div class="compare-values">
+          <div class="compare-then">
+            <span class="compare-then-lbl">İlk Rapor</span>
+            <span class="compare-then-val">1</span>
+          </div>
+          <div class="compare-arrow">→</div>
+          <div class="compare-now">
+            <span class="compare-now-lbl">Bu Hafta</span>
+            <span class="compare-now-val">3</span>
+          </div>
+        </div>
+        <div class="compare-delta positive">▲ +2 yeni teklif</div>
+      </div>
+
+      <div class="compare-item highlight">
+        <div class="compare-label">Toplam Liste Bedeli</div>
+        <div class="compare-values">
+          <div class="compare-then">
+            <span class="compare-then-lbl">İlk Rapor</span>
+            <span class="compare-then-val">₺ 18.005.000</span>
+          </div>
+          <div class="compare-arrow">→</div>
+          <div class="compare-now">
+            <span class="compare-now-lbl">Bu Hafta</span>
+            <span class="compare-now-val">₺ 16.265.000</span>
+          </div>
+        </div>
+        <div class="compare-delta info">Fiyat optimizasyonu: -₺ 1.740.000 (-%9,7)</div>
+      </div>
     </div>
   </div>
 </section>
@@ -365,7 +437,8 @@
     </div>
     <p class="panel-intro">
       Her ilanın Sahibinden.com üzerindeki güncel etkileşim verileri ve listeleme fiyatı.
-      Mesaj almış ilanlar kırmızı vurgu ile gösterilir.
+      Fiyat güncellemesi sonrası önceki fiyatlar üstü çizili olarak referans amaçlı gösterilmiştir.
+      Mesaj veya bildirim alan ilanlar kırmızı vurgu ile öne çıkarılmıştır.
     </p>
 
     <!-- 01 -->
@@ -379,13 +452,15 @@
           <span class="badge road">Yolu Var</span>
         </div>
         <div class="listing-stats">
-          <span class="stat"><svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>171</span>
-          <span class="stat"><svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>1</span>
-          <span class="stat has-msg"><svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>2</span>
+          <span class="stat"><svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>317</span>
+          <span class="stat"><svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>8</span>
+          <span class="stat has-msg"><svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>4</span>
+          <span class="stat"><svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.73 21a2 2 0 0 1-3.46 0"/></svg>0</span>
         </div>
       </div>
       <div class="listing-right">
-        <div class="listing-price">₺ 250.000</div>
+        <div class="listing-price">₺ 225.000</div>
+        <div class="listing-price-old"><span class="old-val">₺ 250.000</span><span class="delta-val">▼ -₺ 25.000</span></div>
         <div class="listing-actions">
           <a href="https://www.sahibinden.com/ilan/emlak-arsa-satilik-remax-force-dan-civril-karabedirler-de-yolu-olan-firsat-arazi-1312986337/detay/" target="_blank" class="btn sahibinden">Sahibinden</a>
         </div>
@@ -402,13 +477,15 @@
           <span class="badge active">Aktif</span>
         </div>
         <div class="listing-stats">
-          <span class="stat"><svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>237</span>
-          <span class="stat"><svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>3</span>
+          <span class="stat"><svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>412</span>
+          <span class="stat"><svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>7</span>
           <span class="stat"><svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>0</span>
+          <span class="stat has-bild"><svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.73 21a2 2 0 0 1-3.46 0"/></svg>1</span>
         </div>
       </div>
       <div class="listing-right">
-        <div class="listing-price">₺ 250.000</div>
+        <div class="listing-price">₺ 230.000</div>
+        <div class="listing-price-old"><span class="old-val">₺ 250.000</span><span class="delta-val">▼ -₺ 25.000</span></div>
         <div class="listing-actions">
           <a href="https://www.sahibinden.com/ilan/emlak-arsa-satilik-remax-force-dan-karabedirler-de-yatirimlik-5200-m2-firsat-arazi-1313028373/detay/" target="_blank" class="btn sahibinden">Sahibinden</a>
         </div>
@@ -425,13 +502,15 @@
           <span class="badge active">Aktif</span>
         </div>
         <div class="listing-stats">
-          <span class="stat"><svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>228</span>
-          <span class="stat"><svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>1</span>
+          <span class="stat"><svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>333</span>
+          <span class="stat"><svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>6</span>
           <span class="stat has-msg"><svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>2</span>
+          <span class="stat"><svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.73 21a2 2 0 0 1-3.46 0"/></svg>0</span>
         </div>
       </div>
       <div class="listing-right">
-        <div class="listing-price">₺ 850.000</div>
+        <div class="listing-price">₺ 770.000</div>
+        <div class="listing-price-old"><span class="old-val">₺ 850.000</span><span class="delta-val">▼ -₺ 80.000</span></div>
         <div class="listing-actions">
           <a href="https://www.sahibinden.com/ilan/emlak-arsa-satilik-remax-force-dan-karabedirler-de-yatirimlik-17700-m2-firsat-arazi-1313064533/detay/" target="_blank" class="btn sahibinden">Sahibinden</a>
         </div>
@@ -449,13 +528,15 @@
           <span class="badge road">Yolu Var</span>
         </div>
         <div class="listing-stats">
-          <span class="stat"><svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>139</span>
+          <span class="stat"><svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>231</span>
           <span class="stat"><svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>1</span>
           <span class="stat"><svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>0</span>
+          <span class="stat"><svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.73 21a2 2 0 0 1-3.46 0"/></svg>0</span>
         </div>
       </div>
       <div class="listing-right">
-        <div class="listing-price">₺ 3.900.000</div>
+        <div class="listing-price">₺ 3.550.000</div>
+        <div class="listing-price-old"><span class="old-val">₺ 3.900.000</span><span class="delta-val">▼ -₺ 350.000</span></div>
         <div class="listing-actions">
           <a href="https://www.sahibinden.com/ilan/emlak-arsa-satilik-civril-karalar-da-yolu-olan-33.700-m2-firsat-arazi-1313079983/detay/" target="_blank" class="btn sahibinden">Sahibinden</a>
         </div>
@@ -472,13 +553,15 @@
           <span class="badge active">Aktif</span>
         </div>
         <div class="listing-stats">
-          <span class="stat"><svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>154</span>
+          <span class="stat"><svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>228</span>
           <span class="stat"><svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>0</span>
           <span class="stat has-msg"><svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>1</span>
+          <span class="stat has-bild"><svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.73 21a2 2 0 0 1-3.46 0"/></svg>1</span>
         </div>
       </div>
       <div class="listing-right">
-        <div class="listing-price">₺ 3.250.000</div>
+        <div class="listing-price">₺ 2.925.000</div>
+        <div class="listing-price-old"><span class="old-val">₺ 3.250.000</span><span class="delta-val">▼ -₺ 325.000</span></div>
         <div class="listing-actions">
           <a href="https://www.sahibinden.com/ilan/emlak-arsa-satilik-remax-force-dan-civril-karalar-da-31.000-m2-firsat-arazi-1313078354/detay/" target="_blank" class="btn sahibinden">Sahibinden</a>
         </div>
@@ -495,13 +578,15 @@
           <span class="badge active">Aktif</span>
         </div>
         <div class="listing-stats">
-          <span class="stat"><svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>108</span>
+          <span class="stat"><svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>153</span>
           <span class="stat"><svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>1</span>
           <span class="stat"><svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>0</span>
+          <span class="stat has-bild"><svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.73 21a2 2 0 0 1-3.46 0"/></svg>1</span>
         </div>
       </div>
       <div class="listing-right">
-        <div class="listing-price">₺ 1.020.000</div>
+        <div class="listing-price">₺ 920.000</div>
+        <div class="listing-price-old"><span class="old-val">₺ 1.020.000</span><span class="delta-val">▼ -₺ 100.000</span></div>
         <div class="listing-actions">
           <a href="https://www.sahibinden.com/ilan/emlak-arsa-satilik-remax-force-dan-civril-karalar-da-10.000-m2-firsat-arazi-1313077214/detay/" target="_blank" class="btn sahibinden">Sahibinden</a>
         </div>
@@ -519,13 +604,15 @@
           <span class="badge road">Yolu Var</span>
         </div>
         <div class="listing-stats">
-          <span class="stat"><svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>72</span>
+          <span class="stat"><svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>104</span>
           <span class="stat"><svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>0</span>
           <span class="stat"><svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>0</span>
+          <span class="stat"><svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.73 21a2 2 0 0 1-3.46 0"/></svg>0</span>
         </div>
       </div>
       <div class="listing-right">
-        <div class="listing-price">₺ 1.550.000</div>
+        <div class="listing-price">₺ 1.400.000</div>
+        <div class="listing-price-old"><span class="old-val">₺ 1.550.000</span><span class="delta-val">▼ -₺ 150.000</span></div>
         <div class="listing-actions">
           <a href="https://www.sahibinden.com/ilan/emlak-arsa-satilik-civril-karalar-da-yolu-olan-13.200-m2-firsat-arazi-1313075155/detay/" target="_blank" class="btn sahibinden">Sahibinden</a>
         </div>
@@ -542,13 +629,15 @@
           <span class="badge active">Aktif</span>
         </div>
         <div class="listing-stats">
-          <span class="stat"><svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>73</span>
+          <span class="stat"><svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>107</span>
           <span class="stat"><svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>0</span>
           <span class="stat"><svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>0</span>
+          <span class="stat has-bild"><svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.73 21a2 2 0 0 1-3.46 0"/></svg>1</span>
         </div>
       </div>
       <div class="listing-right">
-        <div class="listing-price">₺ 1.200.000</div>
+        <div class="listing-price">₺ 1.080.000</div>
+        <div class="listing-price-old"><span class="old-val">₺ 1.200.000</span><span class="delta-val">▼ -₺ 120.000</span></div>
         <div class="listing-actions">
           <a href="https://www.sahibinden.com/ilan/emlak-arsa-satilik-remax-force-dan-civril-karalar-da-11.500-m2-firsat-arazi-1313072685/detay/" target="_blank" class="btn sahibinden">Sahibinden</a>
         </div>
@@ -566,13 +655,15 @@
           <span class="badge road">Yolu Var</span>
         </div>
         <div class="listing-stats">
-          <span class="stat"><svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>104</span>
+          <span class="stat"><svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>161</span>
           <span class="stat"><svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>0</span>
           <span class="stat"><svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>0</span>
+          <span class="stat"><svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.73 21a2 2 0 0 1-3.46 0"/></svg>0</span>
         </div>
       </div>
       <div class="listing-right">
-        <div class="listing-price">₺ 3.270.000</div>
+        <div class="listing-price">₺ 2.950.000</div>
+        <div class="listing-price-old"><span class="old-val">₺ 3.270.000</span><span class="delta-val">▼ -₺ 320.000</span></div>
         <div class="listing-actions">
           <a href="https://www.sahibinden.com/ilan/emlak-arsa-satilik-civril-karalar-da-yolu-olan-28.200-m2-firsat-arazi-1313068134/detay/" target="_blank" class="btn sahibinden">Sahibinden</a>
         </div>
@@ -590,13 +681,15 @@
           <span class="badge road">Yolu Var</span>
         </div>
         <div class="listing-stats">
-          <span class="stat"><svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>70</span>
-          <span class="stat"><svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>0</span>
+          <span class="stat"><svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>110</span>
+          <span class="stat"><svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>1</span>
           <span class="stat"><svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>0</span>
+          <span class="stat has-bild"><svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.73 21a2 2 0 0 1-3.46 0"/></svg>1</span>
         </div>
       </div>
       <div class="listing-right">
-        <div class="listing-price">₺ 1.950.000</div>
+        <div class="listing-price">₺ 1.750.000</div>
+        <div class="listing-price-old"><span class="old-val">₺ 1.950.000</span><span class="delta-val">▼ -₺ 200.000</span></div>
         <div class="listing-actions">
           <a href="https://www.sahibinden.com/ilan/emlak-arsa-satilik-civril-karalar-da-yolu-olan-16.400-m2-firsat-arazi-1313066151/detay/" target="_blank" class="btn sahibinden">Sahibinden</a>
         </div>
@@ -613,13 +706,15 @@
           <span class="badge active">Aktif</span>
         </div>
         <div class="listing-stats">
-          <span class="stat"><svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>225</span>
-          <span class="stat"><svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>2</span>
+          <span class="stat"><svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>344</span>
+          <span class="stat"><svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>5</span>
           <span class="stat"><svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>0</span>
+          <span class="stat has-bild"><svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.73 21a2 2 0 0 1-3.46 0"/></svg>1</span>
         </div>
       </div>
       <div class="listing-right">
-        <div class="listing-price">₺ 300.000</div>
+        <div class="listing-price">₺ 270.000</div>
+        <div class="listing-price-old"><span class="old-val">₺ 300.000</span><span class="delta-val">▼ -₺ 30.000</span></div>
         <div class="listing-actions">
           <a href="https://www.sahibinden.com/ilan/emlak-arsa-satilik-remax-force-dan-karabedirler-de-5300-m2-firsat-arazi-1313024950/detay/" target="_blank" class="btn sahibinden">Sahibinden</a>
         </div>
@@ -636,13 +731,15 @@
           <span class="badge active">Aktif</span>
         </div>
         <div class="listing-stats">
-          <span class="stat"><svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>232</span>
-          <span class="stat"><svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>1</span>
+          <span class="stat"><svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>351</span>
+          <span class="stat"><svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>2</span>
           <span class="stat has-msg"><svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>1</span>
+          <span class="stat has-bild"><svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.73 21a2 2 0 0 1-3.46 0"/></svg>1</span>
         </div>
       </div>
       <div class="listing-right">
-        <div class="listing-price">₺ 215.000</div>
+        <div class="listing-price">₺ 195.000</div>
+        <div class="listing-price-old"><span class="old-val">₺ 215.000</span><span class="delta-val">▼ -₺ 20.000</span></div>
         <div class="listing-actions">
           <a href="https://www.sahibinden.com/ilan/emlak-arsa-satilik-remax-force-dan-karabedirler-de-yatirimlik-4500-m2-firsat-arazi-1313017660/detay/" target="_blank" class="btn sahibinden">Sahibinden</a>
         </div>
@@ -659,7 +756,8 @@
       <h2>Teklif Geçmişi</h2>
     </div>
     <p class="panel-intro">
-      Portföyünüz için gelen teklifler ve mevcut durumları aşağıda listelenir. En yüksek aktif teklif üstte vurgulu olarak yer alır.
+      Portföyünüz için bugüne kadar toplam <strong>3 teklif</strong> alınmıştır. Detayları bilinen teklif
+      aşağıda öncelikli olarak listelenir; diğer 2 tekliften edinilen bilgiler süreçte netleştikçe raporlanacaktır.
     </p>
 
     <div class="offer-list">
@@ -679,43 +777,34 @@
         </div>
         <div class="offer-amount">₺ 30<span class="ppm">/m²</span></div>
       </article>
-    </div>
-  </div>
-</section>
 
-<!-- SÜREÇ TAKVİMİ -->
-<section class="panel">
-  <div class="wrap">
-    <div class="panel-head">
-      <div class="eyebrow">SÜREÇ TAKVİMİ</div>
-      <h2>Şu Ana Kadar Yapılanlar</h2>
-    </div>
-    <p class="panel-intro">
-      Portföyün listelenmesinden bugüne kadar yürütülen tüm çalışmalar kronolojik sırayla aşağıda yer almaktadır.
-    </p>
-    <div class="timeline">
-      <div class="timeline-item">
-        <div class="timeline-date">[TARİH]</div>
-        <div class="timeline-title">12 Portföy İçin İlan Hazırlığı Tamamlandı</div>
-        <div class="timeline-detail">
-          Karabedirler ve Karalar mahallelerindeki 12 parselin başlık, açıklama, kategori filtreleri ve fiyatlama
-          çalışması tamamlandı.
+      <article class="offer-card">
+        <div class="offer-num"><span class="label">TEKLİF</span>#2</div>
+        <div class="offer-info">
+          <div class="offer-date">—</div>
+          <div class="offer-meta">
+            <span class="offer-badge unknown">DETAYLAR BEKLENİYOR</span>
+          </div>
+          <div class="offer-detail">
+            Teklif kayıt altına alındı; teklif sahibi, tarih, kapsam ve tutar bilgileri güncellenecektir.
+          </div>
         </div>
-      </div>
-      <div class="timeline-item">
-        <div class="timeline-date">[TARİH]</div>
-        <div class="timeline-title">12 İlan Sahibinden.com'da Yayına Alındı</div>
-        <div class="timeline-detail">
-          Portföydeki tüm ilanlar Sahibinden.com üzerinde aktif olarak yayına alındı.
+        <div class="offer-amount muted">—</div>
+      </article>
+
+      <article class="offer-card">
+        <div class="offer-num"><span class="label">TEKLİF</span>#3</div>
+        <div class="offer-info">
+          <div class="offer-date">—</div>
+          <div class="offer-meta">
+            <span class="offer-badge unknown">DETAYLAR BEKLENİYOR</span>
+          </div>
+          <div class="offer-detail">
+            Teklif kayıt altına alındı; teklif sahibi, tarih, kapsam ve tutar bilgileri güncellenecektir.
+          </div>
         </div>
-      </div>
-      <div class="timeline-item">
-        <div class="timeline-date">[TARİH]</div>
-        <div class="timeline-title">Mahmut Bey'den İlk Teklif Alındı</div>
-        <div class="timeline-detail">
-          4 portföy için birim ₺30/m² teklifi iletildi. Görüşme süreci devam ediyor.
-        </div>
-      </div>
+        <div class="offer-amount muted">—</div>
+      </article>
     </div>
   </div>
 </section>
