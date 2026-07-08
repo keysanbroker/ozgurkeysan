@@ -4,6 +4,15 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="robots" content="noindex, nofollow">
+<meta name="description" content="Portföyünüzün güncel satış süreci ve haftalık performans verileri.">
+
+<!-- WhatsApp / Facebook / LinkedIn link önizlemesi -->
+<meta property="og:type" content="website">
+<meta property="og:title" content="Haftalık Portföy Raporu">
+<meta property="og:description" content="Portföyünüzün güncel satış süreci ve haftalık performans verileri.">
+<meta property="og:site_name" content="Özgür Keysan · RE/MAX Force">
+<meta property="og:locale" content="tr_TR">
+
 <title>Satış Süreci · S-006 · Özgür Keysan</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -139,7 +148,7 @@
     font-size: 13px;
     flex-wrap: wrap;
   }
-  .cover-meta div { display: flex; flex-direction: column; gap: 4px; }
+  .cover-meta > div { display: flex; flex-direction: column; gap: 4px; }
   .cover-meta .lbl {
     font-family: 'Poppins', sans-serif;
     font-size: 10px;
@@ -822,11 +831,28 @@
   }
 
   /* ===== RESPONSIVE ===== */
+  /* KARŞILAŞTIRMA */
+  .compare-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; }
+  .compare-item { background: #fff; border: 1px solid var(--line); border-radius: 6px; padding: 22px 24px; display: flex; flex-direction: column; }
+  .compare-item.highlight { border-top: 3px solid var(--red); }
+  .compare-label { font-family: 'Poppins', sans-serif; font-size: 10px; font-weight: 600; color: var(--ink-faint); letter-spacing: 1.5px; text-transform: uppercase; margin-bottom: 16px; }
+  .compare-values { display: flex; align-items: center; gap: 12px; margin-bottom: 14px; flex: 1; }
+  .compare-then, .compare-now { display: flex; flex-direction: column; gap: 5px; flex: 1; min-width: 0; }
+  .compare-then-lbl, .compare-now-lbl { font-family: 'Poppins', sans-serif; font-size: 9px; font-weight: 700; letter-spacing: 1.2px; text-transform: uppercase; color: var(--ink-faint); }
+  .compare-then-val { font-family: 'Poppins', sans-serif; font-size: 22px; font-weight: 700; line-height: 1; color: var(--ink-soft); }
+  .compare-now-val { font-family: 'Poppins', sans-serif; font-size: 22px; font-weight: 700; line-height: 1; color: var(--heading); }
+  .compare-arrow { color: var(--ink-faint); font-size: 16px; margin-top: 12px; font-family: 'Poppins', sans-serif; }
+  .compare-delta { font-family: 'Poppins', sans-serif; font-size: 20px; font-weight: 600; padding-top: 14px; margin-top: 4px; border-top: 1px solid var(--line-soft); letter-spacing: -0.01em; line-height: 1.25; }
+  .compare-delta.positive { color: var(--green); }
+  .compare-delta.negative { color: var(--red); }
+  .compare-delta.neutral { color: var(--ink-faint); font-size: 15px; font-weight: 500; }
+
   @media (max-width: 940px) {
     :root { --pad: 28px; }
     .cover h1 { font-size: 28px; }
     .panel-head h2 { font-size: 20px; }
     .kpi-grid { grid-template-columns: repeat(2, 1fr); }
+    .compare-grid { grid-template-columns: repeat(2, 1fr); }
     .property-card {
       grid-template-columns: 1fr;
       gap: 24px;
@@ -854,6 +880,7 @@
     .property-specs { gap: 24px; }
     .quick-links { grid-template-columns: 1fr; }
     .kpi-grid { grid-template-columns: 1fr; }
+    .compare-grid { grid-template-columns: 1fr; }
     .kb-frame { height: 520px; }
     .offer-card {
       grid-template-columns: 1fr;
@@ -876,7 +903,7 @@
       <div class="mark"><span class="nm">Özgür</span>KEYSAN</div>
       <div class="sub">RE/MAX FORCE · DENİZLİ</div>
     </a>
-    <div class="meta">15.06.2026</div>
+    <div class="meta">08.07.2026</div>
   </div>
 </header>
 
@@ -891,13 +918,9 @@
       yönetilmektedir.
     </p>
     <div class="cover-meta">
-      <div class="cover-brand">
-        <div class="mini-mark"><span class="nm">Özgür</span>KEYSAN</div>
-        <div class="mini-sub">RE/MAX FORCE · DENİZLİ</div>
-      </div>
       <div>
         <span class="lbl">Son Güncelleme</span>
-        <span class="val">15 Haziran 2026</span>
+        <span class="val">8 Temmuz 2026</span>
       </div>
     </div>
   </div>
@@ -980,80 +1003,127 @@
     </p>
 
     <div class="week-marker">
-      <span class="week-badge">BU HAFTA</span>
-      <span class="week-date">15 Haziran 2026</span>
+      <span class="week-date">8 Temmuz 2026 verileri</span>
     </div>
 
     <div class="kpi-grid">
       <div class="kpi">
-        <span class="kpi-num">139</span>
+        <span class="kpi-num">215</span>
         <div class="kpi-label">Görüntülenme</div>
-        <div class="kpi-delta neutral">geçen haftaya göre: —</div>
       </div>
       <div class="kpi">
-        <span class="kpi-num">2</span>
+        <span class="kpi-num">3</span>
         <div class="kpi-label">Favori</div>
-        <div class="kpi-delta neutral">geçen haftaya göre: —</div>
       </div>
       <div class="kpi">
         <span class="kpi-num">1</span>
         <div class="kpi-label">Mesaj</div>
-        <div class="kpi-delta neutral">geçen haftaya göre: —</div>
       </div>
       <div class="kpi">
         <span class="kpi-num">0</span>
         <div class="kpi-label">Bildirim</div>
-        <div class="kpi-delta neutral">geçen haftaya göre: —</div>
       </div>
       <div class="kpi featured">
         <span class="kpi-num">0</span>
         <div class="kpi-label">Teklif</div>
-        <div class="kpi-extra">En yüksek: <strong>—</strong></div>
+        <div class="kpi-extra"><strong>—</strong></div>
       </div>
     </div>
+  </div>
+</section>
 
-    <div class="history-subhead">
-      <h3>Haftalık Performans Geçmişi</h3>
-      <p>Her haftanın metrikleri buraya birikir. En yeni hafta üstte yer alır.</p>
+<!-- KARŞILAŞTIRMA -->
+<section class="panel">
+  <div class="wrap">
+    <div class="panel-head">
+      <div class="eyebrow">İLK RAPOR'DAN BU YANA GELİŞİM</div>
+      <h2>3 Haftalık Süreç Karşılaştırması</h2>
     </div>
+    <p class="panel-intro">
+      Mülkünüzün ilk raporlandığı 15 Haziran 2026'dan bugüne kadarki gelişim. İlan performansındaki
+      artış aşağıda görülebilir.
+    </p>
 
-    <div class="history-table-wrap">
-      <table class="history-table">
-        <thead>
-          <tr>
-            <th>Hafta</th>
-            <th>Görüntülenme</th>
-            <th>Favori</th>
-            <th>Mesaj</th>
-            <th>Bildirim</th>
-            <th>Teklif</th>
-            <th>En Yüksek Teklif</th>
-          </tr>
-        </thead>
-        <tbody>
-          <!-- Yeni hafta eklerken bu satırı en üste kopyala, mevcut "current" satırından class="current"i kaldır -->
-          <tr class="current">
-            <td><span class="row-tag">BU HAFTA</span>15 Haz 2026</td>
-            <td>139</td>
-            <td>2</td>
-            <td>1</td>
-            <td>0</td>
-            <td>0</td>
-            <td>—</td>
-          </tr>
-          <!-- ÖRNEK satır (gelecek haftalarda nasıl görüneceğini gösterir, ilk yayında silebilirsin)
-          <tr>
-            <td>5 Haz 2026</td>
-            <td>[—]</td>
-            <td>[—]</td>
-            <td>[—]</td>
-            <td>[—]</td>
-            <td>[—]</td>
-            <td>—</td>
-          </tr>
-          -->
-        </tbody>
-      </table>
+    <div class="compare-grid">
+      <div class="compare-item">
+        <div class="compare-label">Görüntülenme</div>
+        <div class="compare-values">
+          <div class="compare-then">
+            <span class="compare-then-lbl">İlk Rapor</span>
+            <span class="compare-then-val">139</span>
+          </div>
+          <div class="compare-arrow">→</div>
+          <div class="compare-now">
+            <span class="compare-now-lbl">Bu Hafta</span>
+            <span class="compare-now-val">215</span>
+          </div>
+        </div>
+        <div class="compare-delta positive">▲ +76 (%55 artış)</div>
+      </div>
+
+      <div class="compare-item">
+        <div class="compare-label">Favori</div>
+        <div class="compare-values">
+          <div class="compare-then">
+            <span class="compare-then-lbl">İlk Rapor</span>
+            <span class="compare-then-val">2</span>
+          </div>
+          <div class="compare-arrow">→</div>
+          <div class="compare-now">
+            <span class="compare-now-lbl">Bu Hafta</span>
+            <span class="compare-now-val">3</span>
+          </div>
+        </div>
+        <div class="compare-delta positive">▲ +1 (%50 artış)</div>
+      </div>
+
+      <div class="compare-item">
+        <div class="compare-label">Mesaj</div>
+        <div class="compare-values">
+          <div class="compare-then">
+            <span class="compare-then-lbl">İlk Rapor</span>
+            <span class="compare-then-val">1</span>
+          </div>
+          <div class="compare-arrow">→</div>
+          <div class="compare-now">
+            <span class="compare-now-lbl">Bu Hafta</span>
+            <span class="compare-now-val">1</span>
+          </div>
+        </div>
+        <div class="compare-delta neutral">— değişim yok</div>
+      </div>
+
+      <div class="compare-item">
+        <div class="compare-label">Bildirim</div>
+        <div class="compare-values">
+          <div class="compare-then">
+            <span class="compare-then-lbl">İlk Rapor</span>
+            <span class="compare-then-val">0</span>
+          </div>
+          <div class="compare-arrow">→</div>
+          <div class="compare-now">
+            <span class="compare-now-lbl">Bu Hafta</span>
+            <span class="compare-now-val">0</span>
+          </div>
+        </div>
+        <div class="compare-delta neutral">— değişim yok</div>
+      </div>
+
+      <div class="compare-item">
+        <div class="compare-label">Teklif</div>
+        <div class="compare-values">
+          <div class="compare-then">
+            <span class="compare-then-lbl">İlk Rapor</span>
+            <span class="compare-then-val">0</span>
+          </div>
+          <div class="compare-arrow">→</div>
+          <div class="compare-now">
+            <span class="compare-now-lbl">Bu Hafta</span>
+            <span class="compare-now-val">0</span>
+          </div>
+        </div>
+        <div class="compare-delta neutral">— değişim yok</div>
+      </div>
     </div>
   </div>
 </section>
@@ -1097,38 +1167,6 @@
         <span class="offer-badge rejected">REDDEDİLDİ</span>
         <span class="offer-badge withdrew">GERİ ÇEKİLDİ</span>
       -->
-    </div>
-  </div>
-</section>
-
-<!-- ============ SÜREÇ TAKVİMİ ============ -->
-<section class="panel">
-  <div class="wrap">
-    <div class="panel-head">
-      <div class="eyebrow">SÜREÇ TAKVİMİ</div>
-      <h2>Şu Ana Kadar Yapılanlar</h2>
-    </div>
-    <p class="panel-intro">
-      Mülkün listelenmesinden bugüne kadar yürütülen tüm çalışmalar kronolojik sırayla
-      aşağıda yer almaktadır.
-    </p>
-    <div class="timeline">
-      <div class="timeline-item">
-        <div class="timeline-date">[TARİH 1]</div>
-        <div class="timeline-title">Portföy Analiz ve Satış Planı Hazırlandı</div>
-        <div class="timeline-detail">
-          Mülkün konum, alan, ağaç verimi ve bölgedeki emsal satış değerleri analiz edilerek
-          piyasa fiyatlandırma çalışması tamamlandı.
-        </div>
-      </div>
-      <div class="timeline-item">
-        <div class="timeline-date">[TARİH 2]</div>
-        <div class="timeline-title">Sahibinden.com İlanı Yayına Alındı</div>
-        <div class="timeline-detail">
-          İlan başlığı, kategori filtreleri ve açıklama metni piyasa aramalarına optimize edilerek
-          yayına alındı.
-        </div>
-      </div>
     </div>
   </div>
 </section>
