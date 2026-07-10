@@ -1,0 +1,1241 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta name="color-scheme" content="light only">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Değerleme Raporu · Kuyucak Beşeylül 3 Daire · P-097 — RE/MAX Force</title>
+<meta name="robots" content="noindex, nofollow">
+
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='6' fill='%23D62828'/><text x='16' y='23' font-family='Arial' font-size='18' font-weight='700' fill='white' text-anchor='middle'>İ</text></svg>">
+<meta name="theme-color" content="#FFFFFF">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+
+<style>
+  :root {
+    color-scheme: light only;
+    --heading: #1E3A7A;
+    --red: #D62828;
+    --ink: #1d1d1f;
+    --ink-soft: #6e6e73;
+    --ink-faint: #a1a1a6;
+    --line: #ececef;
+    --line-soft: #f4f4f6;
+    --bg: #FFFFFF;
+    --bg-soft: #fafafa;
+    --maxw: 1000px;
+    --pad: 32px;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
+  body {
+    font-family: 'Roboto', sans-serif;
+    color: var(--ink);
+    background: var(--bg);
+    line-height: 1.65;
+    font-size: 15px;
+    font-weight: 400;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+  }
+  h1, h2, h3, h4, .num, .mark { font-family: 'Poppins', sans-serif; color: var(--heading); font-weight: 600; letter-spacing: -0.02em; }
+  .wrap { max-width: var(--maxw); margin: 0 auto; padding: 0 var(--pad); }
+  a { color: inherit; text-decoration: none; }
+
+  /* TOP BAR */
+  .topbar {
+    border-bottom: 1px solid var(--line);
+    padding: 18px 0;
+    background: rgba(255,255,255,0.92);
+    backdrop-filter: saturate(180%) blur(20px);
+    position: sticky; top: 0; z-index: 50;
+  }
+  .topbar .wrap { display: flex; align-items: center; justify-content: space-between; gap: 16px; }
+  .brand { display: inline-block; transition: opacity 0.2s ease; }
+  .brand:hover { opacity: 0.7; }
+  .brand .mark { font-weight: 600; font-size: 15px; line-height: 1; color: var(--red); }
+  .brand .mark .nm { color: var(--ink); margin-right: 4px; font-weight: 600; }
+  .brand .mark .sep { color: var(--ink-faint); margin: 0 8px; font-weight: 400; }
+  .brand .sub {
+    font-size: 10.5px; letter-spacing: 0.16em; text-transform: uppercase;
+    color: var(--ink-faint); margin-top: 5px; font-weight: 500;
+  }
+  .topbar .meta {
+    font-size: 11px; letter-spacing: 0.14em; text-transform: uppercase;
+    color: var(--ink-faint); font-weight: 500;
+  }
+
+  /* KAPAK */
+  .cover { padding: 96px 0 72px; border-bottom: 1px solid var(--line); }
+  .cover .eyebrow {
+    font-size: 11px; letter-spacing: 0.24em; text-transform: uppercase;
+    color: var(--red); font-weight: 600; margin-bottom: 28px;
+  }
+  .cover h1 {
+    font-size: clamp(40px, 5.5vw, 64px); font-weight: 600;
+    line-height: 1.02; letter-spacing: -0.035em; margin-bottom: 18px;
+  }
+  .cover h1 .red { color: var(--red); }
+  .cover .id-line {
+    font-family: 'Poppins', sans-serif; font-size: 17px; font-weight: 400;
+    color: var(--ink-soft); margin-bottom: 48px; letter-spacing: -0.005em;
+  }
+
+  .id-strip {
+    display: grid; grid-template-columns: repeat(4, 1fr); gap: 32px;
+    padding: 28px 0; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line);
+    margin-bottom: 44px;
+  }
+  .id-cell .lbl {
+    font-size: 10.5px; letter-spacing: 0.16em; text-transform: uppercase;
+    color: var(--ink-faint); font-weight: 500; margin-bottom: 8px;
+  }
+  .id-cell .val {
+    font-family: 'Poppins', sans-serif; font-size: 15px; font-weight: 500;
+    color: var(--ink); line-height: 1.3; letter-spacing: -0.005em;
+  }
+
+  /* Kişiye özel karşılama */
+  .greeting { margin-bottom: 56px; max-width: 720px; }
+
+  /* İki parsel kartı */
+  .parcel-cards {
+    display: grid; grid-template-columns: 1fr 1fr; gap: 16px;
+    margin-bottom: 44px;
+  }
+  .parcel-card {
+    padding: 22px 26px;
+    background: var(--bg);
+    border: 1px solid var(--line);
+    border-radius: 12px;
+    border-left: 3px solid var(--red);
+  }
+  .parcel-card .pc-lbl {
+    font-size: 10.5px; letter-spacing: 0.16em; text-transform: uppercase;
+    color: var(--ink-faint); font-weight: 500; margin-bottom: 8px;
+  }
+  .parcel-card .pc-num {
+    font-family: 'Poppins', sans-serif;
+    font-size: 20px; font-weight: 600;
+    color: var(--red); letter-spacing: -0.02em; margin-bottom: 10px;
+  }
+  .parcel-card .pc-detail {
+    font-size: 14px; color: var(--ink); line-height: 1.65;
+  }
+  .parcel-card .pc-detail strong { font-weight: 600; }
+  @media (max-width: 540px) {
+    .parcel-cards { grid-template-columns: 1fr; gap: 12px; }
+  }
+  .greeting .salute {
+    font-family: 'Poppins', sans-serif; font-size: 19px; font-weight: 600;
+    color: var(--heading); margin-bottom: 14px; letter-spacing: -0.015em;
+  }
+  .greeting p {
+    font-size: 15.5px; color: var(--ink); line-height: 1.75; margin: 0 0 14px;
+  }
+  .greeting p.signoff {
+    font-style: italic; color: var(--ink-soft); margin-bottom: 0;
+  }
+
+  .roadmap-title {
+    font-size: 11px; letter-spacing: 0.22em; text-transform: uppercase;
+    color: var(--ink-faint); font-weight: 600; margin-bottom: 20px;
+  }
+  .roadmap-list { list-style: none; counter-reset: rm; }
+  .roadmap-list li {
+    counter-increment: rm; padding: 10px 0 10px 40px; position: relative;
+    font-family: 'Poppins', sans-serif; font-size: 15.5px; font-weight: 500; color: var(--ink);
+    line-height: 1.4; border-bottom: 1px solid var(--line-soft);
+    letter-spacing: -0.005em;
+  }
+  .roadmap-list li:last-child { border-bottom: none; }
+  .roadmap-list li::before {
+    content: "0" counter(rm);
+    position: absolute; left: 0; top: 11px;
+    font-size: 13px; font-weight: 600; color: var(--red); letter-spacing: 0.04em;
+  }
+
+  /* BÖLÜMLER */
+  section.block { padding: 88px 0; border-bottom: 1px solid var(--line); }
+  section.block:last-of-type { border-bottom: none; }
+  .block-head { margin-bottom: 44px; }
+  .block-num {
+    font-size: 11px; letter-spacing: 0.24em; text-transform: uppercase;
+    color: var(--red); font-weight: 600; margin-bottom: 12px;
+  }
+  .block-head h2 {
+    font-size: clamp(26px, 3vw, 32px); font-weight: 600;
+    letter-spacing: -0.025em; line-height: 1.2;
+  }
+  .block-intro {
+    font-size: 15.5px; color: var(--ink-soft); line-height: 1.65;
+    margin-top: 14px; max-width: 720px; font-weight: 400;
+  }
+  .block-intro strong { color: var(--ink); font-weight: 600; }
+
+  /* PORTFÖY PROFİLİ */
+  .embed-wrap {
+    margin-bottom: 14px;
+    border-radius: 14px; overflow: hidden;
+    background: var(--bg-soft);
+  }
+  .embed-wrap iframe { width: 100%; height: 680px; border: none; display: block; }
+  .embed-actions {
+    display: flex; justify-content: space-between; align-items: center;
+    margin-bottom: 4px; gap: 12px; flex-wrap: wrap;
+  }
+  .embed-cap { font-size: 11.5px; color: var(--ink-faint); letter-spacing: 0.04em; }
+  .embed-fullscreen {
+    display: inline-flex; align-items: center; gap: 7px;
+    font-family: 'Poppins', sans-serif; font-size: 12px; font-weight: 500;
+    color: var(--ink); padding: 8px 14px;
+    border: 1px solid var(--line); border-radius: 20px;
+    transition: all 0.2s ease; letter-spacing: -0.005em;
+  }
+  .embed-fullscreen:hover { border-color: var(--red); color: var(--red); }
+  .embed-fullscreen svg { width: 12px; height: 12px; }
+
+  /* Konum görselleri */
+  .loc-images {
+    margin-top: 36px;
+    display: grid; grid-template-columns: 1fr 1fr; gap: 16px;
+  }
+  .loc-images .lim {
+    border-radius: 10px; overflow: hidden;
+    background: var(--bg-soft);
+    border: 1px solid var(--line);
+  }
+  .loc-images .lim img {
+    width: 100%; height: auto; display: block;
+  }
+  .loc-images .lim .cap {
+    font-size: 11px; color: var(--ink-soft);
+    padding: 10px 14px;
+    letter-spacing: 0.02em;
+    background: var(--bg);
+  }
+
+  .topo-note {
+    margin-top: 32px; padding: 26px 30px;
+    background: var(--bg-soft); border-radius: 12px;
+  }
+  .topo-note .ct {
+    font-size: 10.5px; letter-spacing: 0.16em; text-transform: uppercase;
+    color: var(--ink-faint); font-weight: 600; margin-bottom: 14px;
+  }
+  .topo-note h4 {
+    font-size: 15px; font-weight: 600; color: var(--ink);
+    margin-bottom: 8px; letter-spacing: -0.01em;
+  }
+  .topo-note p {
+    font-size: 14.5px; color: var(--ink); line-height: 1.75; margin: 0 0 12px;
+  }
+  .topo-note p:last-child { margin-bottom: 0; }
+  .topo-note p strong { color: var(--ink); font-weight: 600; }
+
+  .access-grid {
+    display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px;
+    margin: 18px 0 4px;
+  }
+  .access-cell {
+    padding: 14px 16px;
+    background: var(--bg); border-radius: 10px;
+    border: 1px solid var(--line);
+  }
+  .access-cell .ac-loc {
+    font-family: 'Poppins', sans-serif; font-size: 13px; font-weight: 600;
+    color: var(--ink); margin-bottom: 6px; letter-spacing: -0.01em;
+  }
+  .access-cell .ac-val {
+    font-family: 'Poppins', sans-serif; font-size: 16px; font-weight: 600;
+    color: var(--red); letter-spacing: -0.02em;
+  }
+  .access-cell .ac-val .unit {
+    font-size: 11px; color: var(--ink-soft); font-weight: 400; margin-left: 4px;
+  }
+
+  /* PAZAR ANALİZİ */
+  .stats {
+    display: grid; grid-template-columns: repeat(4, 1fr); gap: 0;
+    margin-bottom: 48px;
+    border-top: 1px solid var(--line); border-bottom: 1px solid var(--line);
+  }
+  .stat { padding: 22px 24px; border-right: 1px solid var(--line); }
+  .stat:last-child { border-right: none; }
+  .stat .lbl {
+    font-size: 10.5px; letter-spacing: 0.16em; text-transform: uppercase;
+    color: var(--ink-faint); font-weight: 500; margin-bottom: 10px;
+  }
+  .stat .val {
+    font-family: 'Poppins', sans-serif; font-size: 26px; font-weight: 600;
+    color: var(--ink); line-height: 1; letter-spacing: -0.025em;
+  }
+  .stat .val .unit { font-size: 12px; font-weight: 400; color: var(--ink-soft); margin-left: 4px; letter-spacing: 0; }
+  .stat .desc { font-size: 11.5px; color: var(--ink-soft); line-height: 1.5; margin-top: 8px; }
+  .stat.accent .val { color: var(--red); }
+
+  .table-head {
+    display: flex; justify-content: space-between; align-items: baseline;
+    padding-bottom: 12px; border-bottom: 1px solid var(--ink);
+    margin-bottom: 4px; margin-top: 40px;
+  }
+  .table-head h3 { font-size: 16px; font-weight: 600; color: var(--ink); letter-spacing: -0.015em; }
+  .table-head h3 .count {
+    display: inline-block; margin-left: 10px; padding: 2px 9px;
+    background: var(--ink); color: #fff; font-size: 10.5px; font-weight: 600;
+    border-radius: 10px; letter-spacing: 0.02em; vertical-align: 2px;
+  }
+  .table-head h3 .count.active { background: var(--red); }
+  .table-head .hint { font-size: 11.5px; color: var(--ink-faint); letter-spacing: 0.01em; }
+
+  .lst-row {
+    display: grid; grid-template-columns: 36px 60px 1fr 95px 125px 75px;
+    align-items: center; gap: 14px;
+    padding: 16px 14px;
+    border-bottom: 1px solid var(--line-soft);
+    transition: background 0.15s ease;
+  }
+  .lst-row:hover { background: var(--bg-soft); }
+  .lst-row.anchor { box-shadow: inset 3px 0 0 var(--red); padding-left: 18px; }
+  .lst-row.outlier { opacity: 0.4; }
+
+  .lst-thumb {
+    width: 60px; aspect-ratio: 3/4;
+    border-radius: 6px; overflow: hidden;
+    background: var(--bg-soft); border: 1px solid var(--line);
+  }
+  .lst-thumb img { width: 100%; height: 100%; object-fit: cover; display: block; }
+
+  .lst-id {
+    font-family: 'Poppins', sans-serif; font-size: 12px; font-weight: 600;
+    color: var(--red); letter-spacing: 0.04em;
+  }
+  .lst-row.outlier .lst-id { color: var(--ink-faint); }
+  .lst-main .ttl {
+    font-family: 'Poppins', sans-serif; font-size: 14px; font-weight: 500;
+    color: var(--ink); margin-bottom: 4px; line-height: 1.3; letter-spacing: -0.01em;
+  }
+  .lst-main .nt { font-size: 12.5px; color: var(--ink-soft); line-height: 1.45; }
+  .lst-main .nt strong { color: var(--ink); font-weight: 600; }
+  .lst-rate {
+    font-family: 'Poppins', sans-serif; font-size: 13px; font-weight: 600;
+    color: var(--red); text-align: right; letter-spacing: -0.005em;
+  }
+  .lst-price {
+    font-family: 'Poppins', sans-serif; font-size: 13.5px; font-weight: 600;
+    color: var(--ink); text-align: right; letter-spacing: -0.01em;
+  }
+  .lst-days { font-size: 11.5px; color: var(--ink-faint); text-align: right; }
+  .lst-days.long { color: var(--red); font-weight: 500; }
+
+  /* İlan görselleri kartları */
+  .ilan-cards {
+    display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px;
+    margin-top: 36px;
+  }
+  .ic-card {
+    border: 1px solid var(--line); border-radius: 12px; overflow: hidden;
+    background: var(--bg);
+  }
+  .ic-card.anchor { border-color: var(--red); border-width: 1.5px; }
+  .ic-card .ic-img {
+    width: 100%; aspect-ratio: 4/5; overflow: hidden;
+    background: var(--bg-soft);
+    display: block;
+  }
+  .ic-card .ic-img img {
+    width: 100%; height: 100%; object-fit: cover; display: block;
+  }
+  .ic-card .ic-body { padding: 14px 16px; }
+  .ic-card .ic-tag {
+    display: inline-block;
+    font-family: 'Poppins', sans-serif; font-size: 10px; font-weight: 600;
+    color: var(--red); letter-spacing: 0.1em; margin-bottom: 6px;
+  }
+  .ic-card .ic-ttl {
+    font-family: 'Poppins', sans-serif; font-size: 13px; font-weight: 600;
+    color: var(--ink); margin-bottom: 4px; line-height: 1.3; letter-spacing: -0.01em;
+  }
+  .ic-card .ic-meta {
+    font-size: 11.5px; color: var(--ink-soft); line-height: 1.5;
+  }
+
+  .market-summary {
+    margin-top: 40px; padding: 24px 28px;
+    background: var(--bg-soft); border-radius: 12px;
+  }
+  .market-summary p {
+    font-size: 14.5px; color: var(--ink); line-height: 1.75; margin: 0 0 12px;
+  }
+  .market-summary p:last-child { margin-bottom: 0; }
+  .market-summary p strong { font-weight: 600; color: var(--ink); }
+
+  /* YILLIK GELİR POTANSİYELİ */
+  .income-block {
+    padding: 32px 36px;
+    background: var(--bg-soft);
+    border-radius: 14px;
+    border-left: 3px solid var(--red);
+  }
+  .income-block .ib-title {
+    font-family: 'Poppins', sans-serif;
+    font-size: 10.5px; letter-spacing: 0.18em; text-transform: uppercase;
+    color: var(--red); font-weight: 600; margin-bottom: 14px;
+  }
+  .income-block .ib-h {
+    font-family: 'Poppins', sans-serif;
+    font-size: 18px; font-weight: 600;
+    color: var(--ink); margin-bottom: 8px; letter-spacing: -0.015em;
+    line-height: 1.35;
+  }
+  .income-block .ib-sub {
+    font-size: 13.5px; color: var(--ink-soft);
+    margin-bottom: 22px; line-height: 1.65;
+  }
+  .income-block .ib-sub strong { color: var(--ink); font-weight: 600; }
+
+  .income-grid {
+    display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px;
+    margin-bottom: 24px;
+  }
+  .income-cell {
+    padding: 18px 20px;
+    background: var(--bg); border-radius: 10px;
+    text-align: center;
+    border: 1px solid var(--line);
+  }
+  .income-cell.rec {
+    border-color: var(--red); border-width: 1.5px;
+  }
+  .income-cell .ic-lbl {
+    font-family: 'Poppins', sans-serif;
+    font-size: 11px; letter-spacing: 0.14em; text-transform: uppercase;
+    color: var(--ink-soft); font-weight: 600; margin-bottom: 8px;
+  }
+  .income-cell.rec .ic-lbl { color: var(--red); }
+  .income-cell .ic-val {
+    font-family: 'Poppins', sans-serif;
+    font-size: 22px; font-weight: 600;
+    color: var(--heading); letter-spacing: -0.02em; line-height: 1; margin-bottom: 6px;
+  }
+  .income-cell.rec .ic-val { color: var(--red); }
+  .income-cell .ic-det {
+    font-size: 11.5px; color: var(--ink-soft); line-height: 1.4;
+  }
+
+  .income-roi {
+    padding: 18px 22px;
+    background: var(--bg); border-radius: 10px;
+    border-left: 3px solid var(--heading);
+  }
+  .income-roi .roi-lbl {
+    font-family: 'Poppins', sans-serif;
+    font-size: 11px; letter-spacing: 0.14em; text-transform: uppercase;
+    color: var(--ink-soft); font-weight: 600; margin-bottom: 8px;
+  }
+  .income-roi p {
+    font-size: 14px; color: var(--ink); line-height: 1.7; margin: 0;
+  }
+  .income-roi p strong { color: var(--red); font-weight: 700; }
+
+  .income-note {
+    font-size: 11.5px; color: var(--ink-soft);
+    margin-top: 16px; font-style: italic; line-height: 1.55;
+  }
+
+  /* DEĞER ANALİZİ */
+  .price-quote {
+    font-family: 'Poppins', sans-serif; font-size: 18px; font-weight: 500;
+    color: var(--ink); line-height: 1.5; margin: 0 0 40px;
+    padding-left: 18px; border-left: 2px solid var(--red);
+    letter-spacing: -0.015em; max-width: 720px;
+  }
+  .price-quote .muted {
+    display: block; font-size: 14.5px; font-weight: 400; color: var(--ink-soft);
+    margin-top: 6px; letter-spacing: -0.005em;
+  }
+
+  .price-grid { display: grid; grid-template-columns: 1fr; gap: 48px; }
+  .price-grid > .sc-list, .price-grid > .pyramid {
+    max-width: 620px; width: 100%; margin: 0 auto;
+  }
+
+  .pyramid {
+    padding: 36px 32px; border-radius: 14px;
+    background: var(--bg-soft);
+    display: flex; flex-direction: column;
+  }
+  .pyramid .title {
+    font-size: 11px; letter-spacing: 0.2em; text-transform: uppercase;
+    color: var(--ink-faint); font-weight: 600; margin-bottom: 24px; text-align: center;
+  }
+  .pyramid svg {
+    width: 100%; height: auto; display: block;
+    margin: auto 0;
+  }
+
+  .sc-list .sc-intro {
+    font-family: 'Poppins', sans-serif; font-size: 14px; font-weight: 500;
+    color: var(--ink-soft); margin-bottom: 16px; letter-spacing: -0.005em;
+  }
+  .sc {
+    position: relative;
+    padding: 20px 22px;
+    border: 1px solid var(--line); border-radius: 12px;
+    margin-bottom: 12px;
+    background: var(--bg);
+    transition: border-color 0.2s ease;
+  }
+  .sc:hover { border-color: var(--ink-faint); }
+  .sc.rec { border-color: var(--red); border-width: 1.5px; }
+  .sc.rec .rec-tag {
+    position: absolute; top: -10px; left: 18px;
+    background: var(--red); color: #fff;
+    font-family: 'Poppins', sans-serif; font-size: 9.5px; font-weight: 600;
+    padding: 4px 10px; border-radius: 4px; letter-spacing: 0.14em;
+  }
+  .sc-top {
+    display: flex; justify-content: space-between; align-items: baseline;
+    margin-bottom: 6px; gap: 12px;
+  }
+  .sc-lbl {
+    font-family: 'Poppins', sans-serif; font-size: 14px; font-weight: 600;
+    color: var(--ink); letter-spacing: -0.01em;
+  }
+  .sc-rate {
+    font-family: 'Poppins', sans-serif; font-size: 11.5px; font-weight: 500;
+    color: var(--ink-soft); white-space: nowrap;
+  }
+  .sc-price {
+    font-family: 'Poppins', sans-serif; font-size: 20px; font-weight: 600;
+    color: var(--red); line-height: 1; margin-bottom: 8px; letter-spacing: -0.02em;
+  }
+  .sc-price-double {
+    margin-bottom: 10px;
+  }
+  .sc-price-double .pd-row {
+    display: flex; gap: 10px; align-items: baseline;
+    margin-bottom: 4px;
+  }
+  .sc-price-double .pd-row:last-child { margin-bottom: 0; }
+  .sc-price-double .pd-val {
+    font-family: 'Poppins', sans-serif; font-size: 17px; font-weight: 600;
+    color: var(--red); letter-spacing: -0.015em;
+  }
+  .sc-price-double .pd-lbl {
+    font-family: 'Poppins', sans-serif; font-size: 10.5px; font-weight: 600;
+    color: var(--ink-faint); letter-spacing: 0.14em; text-transform: uppercase;
+  }
+  .sc-desc { font-size: 13px; color: var(--ink-soft); line-height: 1.55; }
+
+  /* Önerilen Satışa Çıkış Fiyatı */
+  .final-price {
+    margin-top: 56px;
+    padding: 40px 44px;
+    background: var(--bg);
+    border: 2px solid var(--red);
+    border-radius: 16px;
+    text-align: center;
+    max-width: 720px;
+    margin-left: auto; margin-right: auto;
+    box-shadow: 0 8px 32px rgba(214, 40, 40, 0.08);
+  }
+  .final-price .fp-title {
+    font-family: 'Poppins', sans-serif;
+    font-size: 11px; letter-spacing: 0.24em; text-transform: uppercase;
+    color: var(--red); font-weight: 700; margin-bottom: 18px;
+  }
+  .final-price .fp-rate-top {
+    font-family: 'Poppins', sans-serif;
+    font-size: 13px; color: var(--ink-soft); font-weight: 500;
+    margin-bottom: 24px; letter-spacing: 0.04em;
+  }
+  .final-price .fp-rate-top strong {
+    color: var(--ink); font-weight: 600;
+  }
+  .final-price .fp-breakdown {
+    text-align: left;
+    margin: 0 auto 24px;
+    max-width: 540px;
+  }
+  .final-price .fp-parcel {
+    padding: 16px 0;
+    border-bottom: 1px solid var(--line);
+  }
+  .final-price .fp-parcel:last-child {
+    border-bottom: none;
+  }
+  .final-price .fp-parcel-id {
+    font-family: 'Poppins', sans-serif;
+    font-size: 13px; font-weight: 600;
+    color: var(--red); letter-spacing: -0.005em;
+    margin-bottom: 8px;
+  }
+  .final-price .fp-line {
+    display: flex; justify-content: space-between; align-items: baseline;
+    padding: 5px 0;
+    font-size: 13.5px; color: var(--ink);
+  }
+  .final-price .fp-line .fp-line-amt {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600; color: var(--ink);
+    letter-spacing: -0.005em;
+  }
+  .final-price .fp-line.fp-sub {
+    margin-top: 6px;
+    padding-top: 8px;
+    border-top: 1px solid var(--line-soft);
+    font-weight: 600;
+  }
+  .final-price .fp-line.fp-sub .fp-line-amt {
+    color: var(--heading);
+  }
+  .final-price .fp-amount {
+    font-family: 'Poppins', sans-serif;
+    font-size: clamp(36px, 5.5vw, 52px); font-weight: 700;
+    color: var(--red); line-height: 1; letter-spacing: -0.03em; margin-bottom: 8px;
+    padding-top: 18px;
+    border-top: 2px solid var(--ink);
+  }
+  .final-price .fp-amount-eur {
+    font-family: 'Poppins', sans-serif;
+    font-size: clamp(20px, 3vw, 28px); font-weight: 600;
+    color: var(--heading); line-height: 1; letter-spacing: -0.02em;
+    margin-bottom: 14px;
+  }
+  .final-price .fp-rate {
+    font-family: 'Poppins', sans-serif;
+    font-size: 14.5px; font-weight: 500;
+    color: var(--ink); margin-bottom: 18px; letter-spacing: -0.005em;
+  }
+  .final-price .fp-rate .calc {
+    display: block; font-size: 12px; color: var(--ink-soft);
+    font-weight: 400; margin-top: 4px;
+  }
+  .final-price .fp-desc {
+    font-size: 13.5px; color: var(--ink-soft); line-height: 1.65;
+    max-width: 540px; margin: 0 auto;
+  }
+  @media (max-width: 540px) {
+    .final-price { padding: 28px 22px; margin-top: 40px; }
+  }
+
+  /* PAZARLAMA */
+  .mk-section { margin-bottom: 40px; }
+  .mk-section:last-child { margin-bottom: 0; }
+  .mk-title {
+    font-family: 'Poppins', sans-serif; font-size: 11px;
+    letter-spacing: 0.18em; text-transform: uppercase;
+    color: var(--ink-faint); font-weight: 600; margin-bottom: 20px;
+  }
+  .mk-list {
+    display: grid; grid-template-columns: 1fr 1fr; gap: 14px 28px;
+    list-style: none;
+  }
+  .mk-list li {
+    position: relative; padding: 8px 0 8px 22px;
+    font-size: 14.5px; color: var(--ink); line-height: 1.55;
+  }
+  .mk-list li::before {
+    content: ""; position: absolute; left: 0; top: 16px;
+    width: 6px; height: 6px; background: var(--red); border-radius: 50%;
+  }
+  .mk-list li strong {
+    display: block; font-family: 'Poppins', sans-serif; font-weight: 600;
+    font-size: 14px; color: var(--heading); margin-bottom: 2px; letter-spacing: -0.01em;
+  }
+
+  /* SÜREÇ — Timeline */
+  .timeline { list-style: none; max-width: 760px; }
+  .timeline li {
+    display: grid; grid-template-columns: 64px 1fr; gap: 24px;
+    padding: 18px 0; border-bottom: 1px solid var(--line-soft);
+    align-items: start;
+  }
+  .timeline li:last-child { border-bottom: none; }
+  .timeline .tl-day {
+    font-family: 'Poppins', sans-serif; font-size: 13px; font-weight: 600;
+    color: var(--red); letter-spacing: 0.06em;
+  }
+  .timeline .tl-content {
+    font-size: 14.5px; color: var(--ink); line-height: 1.65;
+  }
+  .timeline .tl-content strong {
+    display: block; font-family: 'Poppins', sans-serif; font-weight: 600;
+    font-size: 15px; color: var(--heading); margin-bottom: 4px; letter-spacing: -0.01em;
+  }
+
+  /* RİSKLER */
+  .risk-text p {
+    font-size: 14.5px; color: var(--ink); line-height: 1.75;
+    margin-bottom: 14px;
+  }
+  .risk-text p strong { font-weight: 700; }
+  .risk-text p:last-child { margin-bottom: 0; }
+
+  .tax {
+    margin-top: 36px; padding: 32px 32px;
+    border-radius: 14px; background: var(--bg-soft);
+  }
+  .tax h4 {
+    font-size: 16px; font-weight: 600; color: var(--ink);
+    margin-bottom: 6px; letter-spacing: -0.015em;
+  }
+  .tax .sub {
+    font-size: 12.5px; color: var(--ink-soft); margin-bottom: 22px; line-height: 1.55;
+  }
+  .tax .sub strong { color: var(--ink); font-weight: 600; }
+
+  .tax-row {
+    display: grid; grid-template-columns: 1fr 1.4fr 120px;
+    align-items: baseline; gap: 14px;
+    padding: 12px 0; border-bottom: 1px solid var(--line);
+  }
+  .tax-row:last-of-type { border-bottom: none; }
+  .tax-row .tx-lbl {
+    font-family: 'Poppins', sans-serif; font-size: 13.5px; font-weight: 500;
+    color: var(--ink); letter-spacing: -0.005em;
+  }
+  .tax-row .tx-desc { font-size: 12px; color: var(--ink-soft); line-height: 1.5; }
+  .tax-row .tx-amt {
+    font-family: 'Poppins', sans-serif; font-size: 14.5px; font-weight: 600;
+    color: var(--ink); text-align: right; letter-spacing: -0.01em;
+  }
+  .tax-row .tx-amt.muted { color: var(--ink-soft); font-weight: 500; font-style: italic; }
+  .tax-div { height: 1px; background: var(--line); margin: 8px 0; }
+  .tax-total {
+    display: grid; grid-template-columns: 1fr 120px; gap: 14px; align-items: baseline;
+    padding: 16px 20px; background: var(--bg);
+    border-radius: 10px; margin-top: 12px;
+  }
+  .tax-total.net { background: var(--bg); border: 1.5px solid var(--red); margin-top: 8px; }
+  .tax-total .l {
+    font-family: 'Poppins', sans-serif; font-size: 14px; font-weight: 600;
+    color: var(--ink); letter-spacing: -0.005em;
+  }
+  .tax-total .a {
+    font-family: 'Poppins', sans-serif; font-size: 19px; font-weight: 600;
+    color: var(--ink); text-align: right; letter-spacing: -0.02em;
+  }
+  .tax-total.net .a { color: var(--red); font-size: 22px; font-weight: 600; }
+  .tax-note {
+    margin-top: 18px; font-size: 12px; color: var(--ink-soft); line-height: 1.6;
+  }
+  .tax-note strong { color: var(--ink); font-weight: 600; }
+
+  /* İki senaryolu vergi bloğu */
+  .tax-scenario { margin-bottom: 40px; }
+  .tax-scenario:last-child { margin-bottom: 0; }
+  .tax-scenario .ts-head { margin-bottom: 16px; }
+  .tax-scenario .ts-num {
+    font-family: 'Poppins', sans-serif;
+    font-size: 10.5px; letter-spacing: 0.18em; text-transform: uppercase;
+    color: var(--red); font-weight: 700; margin-bottom: 6px;
+  }
+  .tax-scenario .ts-title {
+    font-family: 'Poppins', sans-serif;
+    font-size: 18px; font-weight: 600;
+    color: var(--ink); letter-spacing: -0.015em; margin-bottom: 8px;
+  }
+  .tax-scenario .ts-sub {
+    font-size: 13.5px; color: var(--ink-soft); line-height: 1.7;
+    max-width: 720px;
+  }
+  .tax-scenario .ts-sub strong { color: var(--ink); font-weight: 600; }
+  .tax-pending {
+    padding: 36px 32px;
+    background: var(--bg-soft);
+    border: 1px dashed var(--ink-faint);
+    border-radius: 14px;
+    text-align: center;
+  }
+  .tax-pending .tp-msg {
+    font-size: 14px; color: var(--ink-soft); line-height: 1.7;
+    max-width: 480px; margin: 0 auto;
+  }
+  .tax-pending .tp-msg strong {
+    color: var(--ink); font-weight: 600;
+  }
+
+  /* İMZA */
+  .sig { padding: 72px 0 64px; border-top: 1px solid var(--line); }
+  .sig-grid {
+    display: grid; grid-template-columns: 1fr 1fr; gap: 48px;
+    max-width: 760px; margin: 0 auto;
+  }
+  .sig-card { text-align: center; }
+  .sig-card .name {
+    font-family: 'Poppins', sans-serif; font-size: 19px; font-weight: 600;
+    color: var(--heading); margin-bottom: 6px; letter-spacing: -0.015em;
+  }
+  .sig-card .role {
+    font-size: 12.5px; color: var(--ink-soft); letter-spacing: 0.01em;
+    margin-bottom: 4px;
+  }
+  .sig-card .office {
+    font-size: 11.5px; color: var(--ink-faint); letter-spacing: 0.04em;
+    margin-bottom: 18px; text-transform: uppercase;
+  }
+  .sig-card .phone {
+    display: inline-flex; align-items: center; gap: 8px;
+    font-family: 'Poppins', sans-serif; font-size: 15px; font-weight: 500;
+    color: var(--ink); letter-spacing: -0.005em;
+    padding: 10px 18px; border: 1px solid var(--line);
+    border-radius: 22px; transition: all 0.2s ease;
+  }
+  .sig-card .phone:hover { border-color: var(--red); color: var(--red); }
+  .sig-card .phone svg { width: 13px; height: 13px; }
+
+  /* RESPONSIVE */
+  @media (max-width: 1024px) {
+    :root { --pad: 28px; }
+    .embed-wrap iframe { height: 580px; }
+  }
+
+  @media (max-width: 820px) {
+    :root { --pad: 26px; }
+    section.block { padding: 72px 0; }
+    .cover { padding: 80px 0 60px; }
+
+    .id-strip { grid-template-columns: repeat(2, 1fr); gap: 22px; }
+
+    .loc-images { grid-template-columns: 1fr; gap: 14px; }
+
+    .access-grid { grid-template-columns: 1fr; gap: 10px; }
+
+    .stats { grid-template-columns: repeat(2, 1fr); }
+    .stat { border-right: none; border-bottom: 1px solid var(--line); }
+    .stat:nth-last-child(-n+2) { border-bottom: none; }
+    .stat:nth-child(odd) { border-right: 1px solid var(--line); }
+
+    .ilan-cards { grid-template-columns: 1fr; gap: 14px; }
+
+    .income-grid { grid-template-columns: 1fr; gap: 10px; }
+
+    /* İlan satırı — etiketli ve okunaklı */
+    .lst-row {
+      grid-template-columns: 32px 56px 1fr;
+      gap: 4px 12px;
+      padding: 16px;
+      align-items: start;
+    }
+    .lst-id { grid-column: 1; grid-row: 1 / span 4; align-self: start; padding-top: 2px; }
+    .lst-thumb { grid-column: 2; grid-row: 1 / span 4; align-self: start; }
+    .lst-main { grid-column: 3; grid-row: 1; }
+    .lst-rate, .lst-price, .lst-days {
+      grid-column: 3; text-align: left; padding: 2px 0;
+      display: flex; gap: 6px; align-items: baseline; font-size: 12.5px;
+    }
+    .lst-rate::before { content: "Birim"; font-size: 10px; color: var(--ink-faint); font-weight: 400; letter-spacing: 0.06em; text-transform: uppercase; min-width: 44px; }
+    .lst-price::before { content: "Fiyat"; font-size: 10px; color: var(--ink-faint); font-weight: 400; letter-spacing: 0.06em; text-transform: uppercase; min-width: 44px; }
+    .lst-days::before { content: "Süre"; font-size: 10px; color: var(--ink-faint); letter-spacing: 0.06em; text-transform: uppercase; min-width: 44px; }
+    .lst-row.anchor { padding-left: 18px; }
+
+    .mk-list { grid-template-columns: 1fr; }
+    .timeline li { grid-template-columns: 44px 1fr; gap: 14px; }
+
+    .tax { padding: 26px 24px; }
+    .tax-row { grid-template-columns: 1fr 110px; gap: 8px; }
+    .tax-row .tx-desc { grid-column: 1; }
+    .tax-row .tx-amt { grid-column: 2; grid-row: 1 / span 2; align-self: start; }
+    .tax-total { grid-template-columns: 1fr 110px; }
+
+    .income-block { padding: 26px 24px; }
+
+    .embed-wrap iframe { height: 500px; }
+    .sig-grid { gap: 36px; }
+  }
+
+  @media (max-width: 540px) {
+    :root { --pad: 20px; }
+    .topbar .meta, .brand .sub { display: none; }
+    .brand .mark { font-size: 13.5px; }
+    .brand .mark .sep { margin: 0 6px; }
+    .cover { padding: 64px 0 48px; }
+    .cover .id-line { margin-bottom: 36px; }
+    .id-strip { grid-template-columns: 1fr 1fr; gap: 18px; padding: 22px 0; margin-bottom: 44px; }
+    section.block { padding: 60px 0; }
+    .block-head { margin-bottom: 32px; }
+    .stats { grid-template-columns: 1fr 1fr; }
+    .stat { padding: 18px 16px; }
+    .stat .val { font-size: 22px; }
+    .embed-wrap iframe { height: 380px; }
+    .tax { padding: 22px 18px; }
+    .market-summary { padding: 18px 20px; }
+    .topo-note { padding: 22px 20px; }
+    .pyramid { padding: 22px 18px; }
+    .income-block { padding: 22px 20px; }
+    .sig { padding: 56px 0 48px; }
+    .sig-grid { grid-template-columns: 1fr; gap: 40px; }
+    .sig-card .phone { font-size: 14.5px; padding: 10px 18px; }
+  }
+
+  @media (max-width: 380px) {
+    .cover h1 { font-size: 34px; }
+    .embed-wrap iframe { height: 340px; }
+  }
+
+  /* LIGHTBOX */
+  .lb-clickable { cursor: zoom-in; transition: opacity 0.2s ease; }
+  .lb-clickable:hover { opacity: 0.92; }
+  .lightbox {
+    position: fixed; inset: 0; z-index: 100;
+    background: rgba(0,0,0,0.92);
+    display: none;
+    align-items: center; justify-content: center;
+    padding: 32px;
+    cursor: zoom-out;
+  }
+  .lightbox.active { display: flex; }
+  .lightbox img {
+    max-width: 96vw; max-height: 90vh;
+    object-fit: contain; border-radius: 4px;
+    box-shadow: 0 24px 64px rgba(0,0,0,0.4);
+  }
+  .lb-close {
+    position: absolute; top: 20px; right: 20px;
+    width: 40px; height: 40px;
+    background: rgba(255,255,255,0.08);
+    border: 1px solid rgba(255,255,255,0.18);
+    border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    cursor: pointer; color: #fff;
+    font-size: 22px; font-weight: 300;
+    line-height: 1;
+    transition: background 0.2s ease;
+  }
+  .lb-close:hover { background: rgba(255,255,255,0.18); }
+  @media (max-width: 540px) {
+    .lightbox { padding: 16px; }
+    .lb-close { top: 12px; right: 12px; width: 36px; height: 36px; }
+  }
+
+  /* ── BESİHANE RAPORU EK SINIFLAR ── */
+  .gallery{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:16px;margin:32px 0;}
+  .gal-item{margin:0;border-radius:12px;overflow:hidden;background:var(--bg-soft);border:1px solid var(--line);}
+  .gal-item img{width:100%;height:240px;object-fit:cover;display:block;cursor:zoom-in;transition:opacity .2s;}
+  .gal-item img:hover{opacity:.92;}
+  .gal-item figcaption{padding:12px 14px;font-size:12.5px;color:var(--ink-soft);line-height:1.4;}
+
+  .kb-embed{margin-top:32px;}
+  .embed-wrap{border-radius:14px;overflow:hidden;background:var(--bg-soft);margin-bottom:14px;}
+  .embed-wrap iframe{width:100%;height:560px;border:none;display:block;}
+  .embed-actions{display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap;}
+  .embed-cap{font-size:11.5px;color:var(--ink-faint);letter-spacing:.04em;}
+  .embed-fullscreen{display:inline-flex;align-items:center;gap:7px;font-family:'Poppins',sans-serif;font-size:12px;font-weight:500;color:var(--ink);padding:8px 14px;border:1px solid var(--line);border-radius:20px;transition:all .2s;letter-spacing:-.005em;}
+  .embed-fullscreen:hover{border-color:var(--red);color:var(--red);}
+  .embed-fullscreen svg{width:12px;height:12px;}
+
+  /* Bileşen blokları */
+  .comp-block{margin:28px 0;padding:28px 30px;border:1px solid var(--line);border-radius:16px;background:var(--bg);}
+  .comp-head{display:flex;align-items:center;gap:14px;margin-bottom:14px;}
+  .comp-no{width:34px;height:34px;flex-shrink:0;display:flex;align-items:center;justify-content:center;background:var(--heading);color:#fff;border-radius:9px;font-family:'Poppins',sans-serif;font-weight:700;font-size:15px;}
+  .comp-head h3{font-family:'Poppins',sans-serif;font-size:19px;font-weight:600;color:var(--ink);margin:0;flex:1;letter-spacing:-.02em;}
+  .comp-val{font-family:'Poppins',sans-serif;font-size:16px;font-weight:700;color:var(--red);white-space:nowrap;}
+  .comp-desc{font-size:14px;color:var(--ink-soft);line-height:1.65;margin-bottom:16px;}
+  .comp-calc{margin-top:14px;padding:12px 16px;background:var(--bg-soft);border-radius:10px;font-family:'Poppins',sans-serif;font-size:14px;color:var(--ink);text-align:right;}
+  .comp-calc strong{color:var(--red);}
+
+  .comp-table{width:100%;border-collapse:collapse;margin-top:8px;font-size:13.5px;}
+  .comp-table thead th{text-align:left;padding:10px 12px;font-family:'Poppins',sans-serif;font-size:11px;letter-spacing:.06em;text-transform:uppercase;color:var(--ink-faint);font-weight:600;border-bottom:2px solid var(--line);}
+  .comp-table thead th:last-child{text-align:right;}
+  .comp-table tbody td{padding:13px 12px;border-bottom:1px solid var(--line-soft,#f0f0f0);color:var(--ink);vertical-align:top;}
+  .comp-table tbody td:last-child{text-align:right;font-family:'Poppins',sans-serif;font-weight:600;white-space:nowrap;}
+  .comp-table .ct-sub{display:block;font-size:11.5px;color:var(--ink-faint);font-weight:400;margin-top:3px;line-height:1.4;}
+
+  .comp-total{margin-top:28px;border-radius:14px;overflow:hidden;border:1.5px solid var(--heading);}
+  .comp-total .ct-row{display:flex;justify-content:space-between;align-items:center;padding:14px 22px;font-family:'Poppins',sans-serif;font-size:14.5px;color:var(--ink);border-bottom:1px solid var(--line-soft,#eee);}
+  .comp-total .ct-row span:last-child{font-weight:600;}
+  .comp-total .ct-grand{background:var(--heading);color:#fff;font-size:17px;font-weight:700;border-bottom:none;}
+  .comp-total .ct-grand span:last-child{color:#fff;}
+
+  /* Risk kutusu */
+  .risk-box{margin-top:28px;padding:28px 30px;background:#FFFBEB;border:1px solid #F0D98C;border-radius:16px;}
+  .risk-box h4{font-family:'Poppins',sans-serif;font-size:15px;font-weight:700;color:#92400E;margin:0 0 16px;}
+  .risk-list{list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:14px;}
+  .risk-list li{font-size:13.5px;color:#78350F;line-height:1.6;padding-left:18px;position:relative;}
+  .risk-list li::before{content:"";position:absolute;left:0;top:8px;width:6px;height:6px;border-radius:50%;background:#D97706;}
+  .risk-list strong{color:#92400E;font-weight:600;}
+
+  @media(max-width:820px){
+    .gallery{grid-template-columns:1fr 1fr;}
+    .embed-wrap iframe{height:360px;}
+    .comp-head{flex-wrap:wrap;}
+    .comp-val{width:100%;}
+    .comp-table{font-size:12px;}
+    .comp-table thead th,.comp-table tbody td{padding:8px 6px;}
+  }
+  @media(max-width:520px){
+    .gallery{grid-template-columns:1fr;}
+  }
+
+
+  /* Karanlık mod / forced-dark koruması — rapor hep açık temada görünür */
+  html { background: #FFFFFF; color-scheme: light only; }
+  @media (prefers-color-scheme: dark) {
+    html, body { background: #FFFFFF !important; color: #1d1d1f !important; }
+  }
+
+  .sig-card .name .surname{color:var(--red);font-weight:700;text-transform:uppercase;letter-spacing:0.01em;}
+</style>
+</head>
+<body>
+<div class="topbar">
+  <div class="wrap">
+    <div class="brands" style="display:flex;align-items:center;gap:18px;">
+      <div class="brand">
+        <div class="mark"><span class="nm">Özgür</span>İÇDEŞ</div>
+        <div class="sub">RE/MAX Force</div>
+      </div>
+    </div>
+    <div class="meta">10.07.2026</div>
+  </div>
+</div>
+
+<!-- KAPAK -->
+<header class="cover">
+  <div class="wrap">
+    <div class="eyebrow">Gayrimenkul Değerleme Raporu · 10 Temmuz 2026</div>
+    <h1>Kuyucak, Beşeylül<br><span class="red">3 Daire · P-097</span></h1>
+    <div class="id-line">3 adet 3+1 daire · 274/21 parsel · toplu (tek elden) satış</div>
+
+    <div class="id-strip">
+      <div class="id-cell"><div class="lbl">İl / İlçe</div><div class="val">Aydın / Kuyucak</div></div>
+      <div class="id-cell"><div class="lbl">Mahalle</div><div class="val">Beşeylül</div></div>
+      <div class="id-cell"><div class="lbl">Ada / Parsel</div><div class="val">274 / 21</div></div>
+      <div class="id-cell"><div class="lbl">Portföy</div><div class="val">3 × 3+1</div></div>
+    </div>
+
+    <div class="parcel-cards">
+      <div class="parcel-card">
+        <div class="pc-lbl">Portföy Niteliği</div>
+        <div class="pc-num">3 × 3+1</div>
+        <div class="pc-detail"><strong>Üç adet 3+1 daire</strong> · Beşeylül merkez · 274/21 parsel · tek elden toplu satış</div>
+      </div>
+      <div class="parcel-card">
+        <div class="pc-lbl">Satış Modeli</div>
+        <div class="pc-num">Toplu Satış</div>
+        <div class="pc-detail"><strong>Üç dairenin birlikte satışı</strong> · alıcıya toplu alım avantajı · satıcıya hız ve tek süreç</div>
+      </div>
+    </div>
+
+    <p class="salute">Sayın Selim Bey,</p>
+    <p>Bu çalışma, Kuyucak Beşeylül'deki 3 adet 3+1 dairenizin satış sürecini en doğru şekilde yürütebilmeniz amacıyla hazırlanmıştır. Bölgedeki benzer daire ilanlarını ve fiyat beklentilerini değerlendirerek, üç dairenin birlikte satışı için gerçekçi bir fiyat aralığı belirledim.</p>
+    <p>Raporda; portföyün profili, bölgedeki emsal durumu ve önerdiğim satış fiyatı aralığını bulacaksınız.</p>
+    <p class="signoff">İyi okumalar dilerim.</p>
+
+    <div class="roadmap-title" style="margin-top:48px;">Rapor İçeriği</div>
+    <ol class="roadmap-list">
+      <li>Portföy Profili</li>
+      <li>Pazar Analizi · Emsal</li>
+      <li>Değer Analizi ve Fiyat Aralığı</li>
+      <li>Riskler ve Maliyetler</li>
+    </ol>
+  </div>
+</header>
+
+<!-- 01 PORTFÖY PROFİLİ -->
+<section class="block">
+  <div class="wrap">
+    <div class="block-head">
+      <div class="block-num">01</div>
+      <h2>Portföy Profili</h2>
+      <p class="block-intro">Portföy, Aydın Kuyucak'a bağlı Beşeylül mahallesinde, 274 ada 21 parsel üzerinde yer alan <strong>3 adet 3+1 daireden</strong> oluşmaktadır. Değerleme, üç dairenin tek elden ve birlikte satışı esas alınarak yapılmıştır.</p>
+    </div>
+
+    <div class="market-summary">
+      <h4>Portföyün Öne Çıkan Özellikleri</h4>
+      <p>Üç dairenin aynı satıcıya ait ve birlikte satışa sunulacak olması, bu portföyün en belirgin özelliğidir. Bu durum, tek daire alımına göre <strong>toplu alım avantajı</strong> arayan yatırımcı profili için cazip bir fırsat oluşturur; satıcı açısından ise üç ayrı süreç yerine <strong>tek ve hızlı bir satış süreci</strong> anlamına gelir.</p>
+      <p>Değerleme, bu toplu satış modeline göre kurgulanmıştır. Dairelerin tek tek pazarlanması durumunda birim fiyat ve satış süresi farklılık gösterebilir; bu husus rapor sonunda ayrıca ele alınmıştır.</p>
+    </div>
+  </div>
+</section>
+
+<!-- 02 PAZAR ANALİZİ -->
+<section class="block">
+  <div class="wrap">
+    <div class="block-head">
+      <div class="block-num">02</div>
+      <h2>Pazar Analizi</h2>
+      <p class="block-intro">Bölgedeki benzer daire ilanlarını ve fiyat beklentilerini inceledim. Emsaller kesin fiyat değil, bir aralık ve yön verir.</p>
+    </div>
+
+    <div class="stats">
+      <div class="stat"><div class="lbl">Emsal Tek Daire</div><div class="val">3,40<span class="unit">Mn TL</span></div><div class="desc">benzer 3+1 · satılmadı (tavan)</div></div>
+      <div class="stat"><div class="lbl">Daire Başı (öneri)</div><div class="val">~2,73<span class="unit">Mn TL</span></div><div class="desc">3 daire birlikte · gerçekçi</div></div>
+      <div class="stat"><div class="lbl">Dengeli Toplam</div><div class="val">8,0–8,2<span class="unit">Mn TL</span></div><div class="desc">3 dairenin önerilen bandı</div></div>
+      <div class="stat accent"><div class="lbl">Satışa Çıkış</div><div class="val">8,20<span class="unit">Mn TL</span></div><div class="desc">müzakere → 8,00 Mn</div></div>
+    </div>
+
+    <div class="market-summary">
+      <h4>Piyasanın söylediği</h4>
+      <p>Aynı nitelikte bir 3+1 dairenin <strong>3.400.000 TL'den yayınlanıp uzun süre satılamamış</strong> olması, tek daire bazında bu fiyatın piyasa tarafından karşılanmadığını gösteriyor — bu bir <strong>tavan sinyalidir</strong>, gerçekleşen fiyat değildir.</p>
+      <p>Üç dairenin birlikte, tek elden satışa sunulması ise hem alıcı için toplu alım avantajı hem satıcı için hız sağlar. Bu iki unsuru birlikte değerlendirdiğimizde, daire başına <strong>~2.700.000 TL</strong>, toplamda <strong>8.000.000 – 8.200.000 TL</strong> seviyesi; hem satılamayan 3.4M istek fiyatının gerçekçi biçimde altında hem de makul sürede alıcı bulabilecek bir bandtır.</p>
+    </div>
+  </div>
+</section>
+
+<!-- 03 DEĞER ANALİZİ -->
+<section class="block">
+  <div class="wrap">
+    <div class="block-head">
+      <div class="block-num">03</div>
+      <h2>Değer Analizi ve Fiyat Aralığı</h2>
+      <p class="block-intro">Emsal okumasını ve toplu satış avantajını birlikte değerlendirerek dört satış senaryosu oluşturdum. Önerim, üç daire toplamı için <strong>Dengeli</strong> banttır.</p>
+    </div>
+
+    <div class="price-grid">
+      <div class="sc-list">
+        <p class="sc-intro">Dört senaryo (3 daire toplamı):</p>
+
+        <div class="sc">
+          <div class="sc-top"><span class="sc-lbl">Sabırlı / Üst</span><span class="sc-rate">~2,83 Mn/daire</span></div>
+          <div class="sc-price">8.200.000 – 8.500.000 TL</div>
+          <div class="sc-desc">Üst beklenti. Geniş pazarlık payı bırakır ancak alıcı bulma süresi uzayabilir. Acele etmeyen satıcı için.</div>
+        </div>
+
+        <div class="sc rec">
+          <span class="rec-tag">ÖNERİLEN</span>
+          <div class="sc-top"><span class="sc-lbl">Dengeli</span><span class="sc-rate">~2,70 Mn/daire</span></div>
+          <div class="sc-price">8.000.000 – 8.200.000 TL</div>
+          <div class="sc-desc">Toplu satış avantajını yansıtan, makul sürede ciddi alıcı çeken gerçekçi band. Satılamayan 3.4M'lik tek daire istek fiyatının belirgin altında.</div>
+        </div>
+
+        <div class="sc">
+          <div class="sc-top"><span class="sc-lbl">Hızlı Satış</span><span class="sc-rate">~2,63 Mn/daire</span></div>
+          <div class="sc-price">7.800.000 – 8.000.000 TL</div>
+          <div class="sc-desc">Daha hızlı sonuç isteyen satıcı için. Pazarlık marjı daralır, kapanma olasılığı artar.</div>
+        </div>
+
+        <div class="sc">
+          <div class="sc-top"><span class="sc-lbl">Değer Kaybı</span><span class="sc-rate">2,60 Mn/daire altı</span></div>
+          <div class="sc-price">7.800.000 TL altı</div>
+          <div class="sc-desc">Toplu satış avantajının altına iner; önerilmez.</div>
+        </div>
+      </div>
+
+      <div class="pyramid">
+        <div class="title">Fiyat – Süre Piramidi · 3 Daire</div>
+        <svg viewBox="0 0 580 460" xmlns="http://www.w3.org/2000/svg">
+          <defs>
+            <linearGradient id="g97a" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#FFE2E2"/><stop offset="100%" stop-color="#FFC9C9"/></linearGradient>
+            <linearGradient id="g97b" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#FFC9C9"/><stop offset="100%" stop-color="#D62828"/></linearGradient>
+          </defs>
+
+          <polygon points="220,30 280,100 160,100" fill="url(#g97a)" stroke="#B71F1F" stroke-width="1.5"/>
+          <polygon points="160,100 280,100 320,190 120,190" fill="url(#g97b)" stroke="#B71F1F" stroke-width="1.5"/>
+          <polygon points="120,190 320,190 360,285 80,285" fill="#F2F5FA" stroke="#1E3A7A" stroke-width="1"/>
+          <polygon points="80,285 360,285 400,395 40,395" fill="#E8EBF2" stroke="#1E3A7A" stroke-width="1" opacity="0.6"/>
+
+          <line x1="250" y1="65" x2="395" y2="65" stroke="#c8c8cc" stroke-width="1.2" stroke-dasharray="3 3"/>
+          <line x1="300" y1="145" x2="395" y2="145" stroke="#c8c8cc" stroke-width="1.2" stroke-dasharray="3 3"/>
+          <line x1="340" y1="237" x2="395" y2="237" stroke="#c8c8cc" stroke-width="1.2" stroke-dasharray="3 3"/>
+          <line x1="380" y1="340" x2="395" y2="340" stroke="#c8c8cc" stroke-width="1.2" stroke-dasharray="3 3"/>
+
+          <text x="400" y="62" font-family="Poppins, sans-serif" font-size="22" font-weight="600" fill="#B71F1F">Sabırlı</text>
+          <text x="400" y="88" font-family="Roboto, sans-serif" font-size="15" font-weight="400" fill="#555">8.200.000 – 8.500.000 TL</text>
+
+          <text x="400" y="138" font-family="Poppins, sans-serif" font-size="26" font-weight="700" fill="#B71F1F">Dengeli</text>
+          <text x="400" y="160" font-family="Poppins, sans-serif" font-size="11" font-weight="700" fill="#B71F1F" letter-spacing="2.5">ÖNERİLEN</text>
+          <text x="400" y="184" font-family="Roboto, sans-serif" font-size="15" font-weight="500" fill="#222">8.000.000 – 8.200.000 TL</text>
+
+          <text x="400" y="234" font-family="Poppins, sans-serif" font-size="22" font-weight="600" fill="#1E3A7A">Hızlı Satış</text>
+          <text x="400" y="260" font-family="Roboto, sans-serif" font-size="15" font-weight="400" fill="#555">7.800.000 – 8.000.000 TL</text>
+
+          <text x="400" y="337" font-family="Poppins, sans-serif" font-size="20" font-weight="500" fill="#6e6e73">Değer Kaybı</text>
+          <text x="400" y="362" font-family="Roboto, sans-serif" font-size="15" font-weight="400" fill="#888">7.800.000 TL altı</text>
+        </svg>
+      </div>
+    </div>
+
+    <div class="final-price">
+      <div class="fp-title">Önerilen Satışa Çıkış (Toplam) Fiyatı</div>
+      <div class="fp-breakdown">
+        <div class="fp-parcel">
+          <div class="fp-parcel-id">Fiyat Hesabı</div>
+          <div class="fp-line"><span>Daire adedi</span><span class="fp-line-amt">3 adet 3+1</span></div>
+          <div class="fp-line"><span>Daire başı (~)</span><span class="fp-line-amt">2.733.000 TL</span></div>
+          <div class="fp-line fp-sub"><span>Toplam satışa çıkış</span><span class="fp-line-amt">8.200.000 TL</span></div>
+        </div>
+      </div>
+      <div class="fp-amount">8.200.000 TL</div>
+      <div class="fp-rate">TOPLAM TEKLİF FİYATI<span class="calc">Müzakere bandı: 8.000.000 – 8.200.000 TL</span></div>
+      <div class="fp-desc">Dengeli senaryonun üst noktası. Daire başına ~2,73 milyon TL'ye denk gelir; bölgede satılamayan 3.400.000 TL'lik tek daire istek fiyatının belirgin altında konumlanır ve üç dairenin toplu satış avantajını yansıtır. Hem değeri korur hem de makul sürede alıcı bulma şansını yükseltir.</div>
+    </div>
+  </div>
+</section>
+
+<!-- 04 RİSKLER VE MALİYETLER -->
+<section class="block">
+  <div class="wrap">
+    <div class="block-head">
+      <div class="block-num">04</div>
+      <h2>Riskler ve Maliyetler</h2>
+      <p class="block-intro">Aşağıdaki tablo, satışın <strong>8.200.000 TL</strong> (3 daire toplamı) üzerinden gerçekleşmesi durumunda tüm kesintiler sonrası elinize geçecek tahmini net tutarı göstermektedir.</p>
+    </div>
+
+    <div class="tax">
+      <h4>Maliyet Hesabı</h4>
+      <div class="sub">Toplam satış bedeli: <strong>8.200.000 TL</strong> · 500.000 TL üstü portföyler için %2 hizmet bedeli + %20 KDV; ayrıca tapu harcı, tapuda beyan edilen satış bedelinin %4'ü üzerinden hesaplanır.</div>
+
+      <div class="tax-row">
+        <div class="tx-lbl">Hizmet Bedeli (%2)</div>
+        <div class="tx-desc">8.200.000 × %2</div>
+        <div class="tx-amt">164.000 TL</div>
+      </div>
+      <div class="tax-row">
+        <div class="tx-lbl">KDV (%20)</div>
+        <div class="tx-desc">Hizmet bedeli üzerinden</div>
+        <div class="tx-amt">32.800 TL</div>
+      </div>
+      <div class="tax-row">
+        <div class="tx-lbl">Tapu Harcı (%4)</div>
+        <div class="tx-desc">8.200.000 × %4</div>
+        <div class="tx-amt">328.000 TL</div>
+      </div>
+
+      <div class="tax-total">
+        <div class="l">Toplam Kesinti</div>
+        <div class="a">524.800 TL</div>
+      </div>
+      <div class="tax-total net">
+        <div class="l">Net Elinize Geçen</div>
+        <div class="a">≈ 7.675.200 TL</div>
+      </div>
+
+      <p class="tax-note"><strong>Not:</strong> Tapu harcı, tapuda beyan edilen satış bedeli üzerinden %4 hesaplanır. Buradaki <strong>328.000 TL, satış bedelinin tapuda tam (8.200.000 TL) gösterilmesi durumunda</strong> oluşan tutardır. Birden fazla dairenin aynı dönemde satışının vergisel etkisi (değer artış kazancı / ticari kazanç) mali müşavirinizle değerlendirilmelidir.</p>
+    </div>
+
+    <div class="risk-box">
+      <h4>Dikkat Edilecek Hususlar</h4>
+      <ul class="risk-list">
+        <li><strong>Toplu satış / alıcı havuzu:</strong> Üç dairenin birlikte satışı, tek seferde toplu alım yapabilecek bir yatırımcı gerektirir; bu, alıcı havuzunu daraltabilir. Gerekirse daireler tek tek de pazarlanabilir, ancak bu durumda birim fiyat ve satış süresi değişir.</li>
+        <li><strong>Emsal fiyat algısı:</strong> Benzer tek dairenin 3.400.000 TL'den satılamaması, bölgede beklentinin gerçekleşenin üzerinde olduğunu gösteriyor. Gerçekçi fiyat + toplu satış avantajı bu algıyı kıracaktır.</li>
+        <li><strong>Beyan ve net hesap:</strong> Yukarıdaki net tutar, satış bedelinin tapuda tam beyan edilmesi varsayımıyla hesaplanmıştır; beyan bedeli değişirse tapu harcı ve net tutar da değişir.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- İMZA -->
+<section class="block sig-block">
+  <div class="wrap">
+    <div class="sig-grid" style="grid-template-columns:1fr;max-width:380px;margin:0 auto;">
+      <div class="sig-card">
+        <div class="name">Özgür <span class="surname">İÇDEŞ</span></div>
+        <div class="role">Gayrimenkul Danışmanı</div>
+        <div class="office">RE/MAX Force</div>
+        <a class="phone" href="tel:+905533965426">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.8 19.8 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.8 19.8 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.9.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          +90 553 396 54 26
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+</body>
+</html>
